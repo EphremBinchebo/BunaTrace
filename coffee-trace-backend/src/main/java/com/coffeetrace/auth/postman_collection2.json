@@ -1,0 +1,91 @@
+{
+  "info": {
+    "name": "CoffeeTrace Authentication",
+    "_postman_id": "c0ffee-trace-auth-1234-5678",
+    "description": "Auth API for CoffeeTrace (Register, Login, Test Protected Route)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"ephrem\",\n  \"password\": \"Abigail2020\",\n  \"role\": \"ADMIN\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/engageai/auth/register",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "engageai", "auth", "register"]
+        }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"ephrem\",\n  \"password\": \"Abigail2020\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/engageai/auth/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "engageai", "auth", "login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Test Protected API",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/test/secure",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "test", "secure"]
+        }
+      }
+    }
+  ],
+  "event": [
+    {
+      "listen": "test",
+      "script": {
+        "exec": [
+          "if (pm.response.code === 200 && pm.response.json().token) {",
+          "    pm.collectionVariables.set(\"token\", pm.response.json().token);",
+          "    console.log(\"Token saved to collection variables\");",
+          "}"
+        ],
+        "type": "text/javascript"
+      }
+    }
+  ]
+}

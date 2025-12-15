@@ -1,0 +1,81 @@
+{
+  "info": {
+    "_postman_id": "c4c9c35a-1234-4ff9-9c12-8fb0f87ea800",
+    "name": "CoffeeTrace - Farms API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Farms",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/farms",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "farms"]
+        }
+      }
+    },
+    {
+      "name": "Get Farms by Farmer ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/farms/farmer/{{farmerId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "farms", "farmer", "{{farmerId}}"]
+        }
+      }
+    },
+    {
+      "name": "Get Farm by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/farms/{{farmId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "farms", "{{farmId}}"]
+        }
+      }
+    },
+    {
+      "name": "Create Farm",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"farmerId\": \"{{farmerId}}\",\n  \"name\": \"Farm A\",\n  \"areaHa\": 2.5,\n  \"elevationM\": 1900,\n  \"region\": \"SNNPR\",\n  \"zone\": \"Gedeo\",\n  \"woreda\": \"Yirgacheffe\",\n  \"kebele\": \"Konga\",\n  \"variety\": \"Heirloom\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/farms",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "farms"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "farmerId",
+      "value": "PUT-A-REAL-FARMER-UUID-HERE"
+    },
+    {
+      "key": "farmId",
+      "value": "PUT-A-REAL-FARM-UUID-HERE"
+    }
+  ]
+}
