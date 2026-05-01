@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@screens/*": [
+        "screens/*"
+      ],
+      "@navigation/*": [
+        "navigation/*"
+      ],
+      "@services/*": [
+        "services/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "strict": false
+  },
+  "extends": "expo/tsconfig.base"
+}
