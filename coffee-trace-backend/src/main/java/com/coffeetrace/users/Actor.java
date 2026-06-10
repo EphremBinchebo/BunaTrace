@@ -3,6 +3,8 @@ package com.coffeetrace.users;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 import java.util.UUID;
 @Entity
@@ -14,7 +16,8 @@ public class Actor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(columnDefinition = "CHAR(36)")
+    @JdbcTypeCode(SqlTypes.CHAR)
+    @Column(name = "id", length = 36, nullable = false, updatable = false)
     private UUID id;   // <-- Manual UUID only, do NOT generate
 
     private String name;
