@@ -16,6 +16,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.time.LocalDate;
+
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
@@ -80,94 +83,293 @@ public class BatchWorkflowService {
 //        return batchRepo.save(batch);
 //
 //    }
-
+    @Transactional
     public Batch createBatch(BatchCreateRequest req) {
 
-        if (req.getStationId() == null) throw new IllegalArgumentException("stationId is required");
-        if (req.getBatchCode() == null || req.getBatchCode().isBlank()) throw new IllegalArgumentException("batchCode is required");
-        if (req.getProcessType() == null || req.getProcessType().isBlank()) throw new IllegalArgumentException("processType is required");
-        if (req.getDeliveryIds() == null || req.getDeliveryIds().isEmpty()) throw new IllegalArgumentException("deliveryIds is required");
+        // ==========================================================
+        // Validate Request
+        // ==========================================================
+
+        if (req.getStationId() == null) {
+            throw new IllegalArgumentException("Station is required.");
+        }
+
+        if (req.getBatchCode() == null || req.getBatchCode().isBlank()) {
+            throw new IllegalArgumentException("Batch code is required.");
+        }
+
+        if (req.getProcessType() == null || req.getProcessType().isBlank()) {
+            throw new IllegalArgumentException("Process type is required.");
+        }
+
+        if (req.getDeliveryIds() == null || req.getDeliveryIds().isEmpty()) {
+            throw new IllegalArgumentException("Please select at least one delivery.");
+        }
 
         if (batchRepo.existsByBatchCode(req.getBatchCode())) {
-            throw new IllegalArgumentException("batchCode already exists: " + req.getBatchCode());
+            throw new IllegalArgumentException(
+                    "Batch code already exists: " + req.getBatchCode());
         }
+
+        // ==========================================================
+        // Load Station
+        // ==========================================================
 
         Actor station = actorRepo.findById(req.getStationId())
-                .orElseThrow(() -> new IllegalArgumentException("Invalid stationId"));
+                .orElseThrow(() ->
+                        new IllegalArgumentException("Invalid washing station"));
 
-        List<FarmerDelivery> deliveries = deliveryRepo.findAllById(req.getDeliveryIds());
+        // ==========================================================
+        // Load Deliveries
+        // ==========================================================
+
+        List<FarmerDelivery> deliveries =
+                deliveryRepo.findAllById(req.getDeliveryIds());
+
         if (deliveries.size() != req.getDeliveryIds().size()) {
-            throw new IllegalArgumentException("Some deliveryIds not found");
+            throw new IllegalArgumentException(
+                    "One or more deliveries were not found.");
         }
 
-        // Validate deliveries
+        // ==========================================================
+        // Validate Deliveries
+        // ==========================================================
+
+        double totalCherryKg = 0.0;
+
+        LocalDate earliestDelivery = null;
+        LocalDate latestDelivery = null;
+
         for (FarmerDelivery d : deliveries) {
+
             if (d.getBatch() != null) {
                 throw new ResponseStatusException(
                         HttpStatus.CONFLICT,
-                        "Delivery already assigned to another batch"
-                );
+                        "Delivery " + d.getReceiptNumber()
+                                + " already belongs to batch "
+                                + d.getBatch().getBatchCode());
             }
-//            if (d.getBatch() != null) {
-//                throw new IllegalArgumentException("Delivery already assigned to batch: " + d.getId());
-//            }
-            if (d.getWashingStation() == null || !d.getWashingStation().getId().equals(station.getId())) {
-                throw new IllegalArgumentException("Delivery station mismatch: " + d.getId());
+
+            if (d.getWashingStation() == null ||
+                    !d.getWashingStation().getId().equals(station.getId())) {
+
+                throw new IllegalArgumentException(
+                        "Delivery "
+                                + d.getReceiptNumber()
+                                + " belongs to another washing station.");
+            }
+
+            totalCherryKg +=
+                    d.getCherryKg() == null ? 0 : d.getCherryKg();
+
+            if (d.getDeliveryTime() != null) {
+
+                LocalDate date = d.getDeliveryTime().toLocalDate();
+
+                if (earliestDelivery == null || date.isBefore(earliestDelivery)) {
+                    earliestDelivery = date;
+                }
+
+                if (latestDelivery == null || date.isAfter(latestDelivery)) {
+                    latestDelivery = date;
+                }
             }
         }
 
-        // Create QR token (simple)
-        String qr = "QR-" + req.getBatchCode();
+        // ==========================================================
+        // Generate QR
+        // ==========================================================
+
+        String qrCode = "QR-" + req.getBatchCode();
+
+        // ==========================================================
+        // Create Batch
+        // ==========================================================
 
         Batch batch = Batch.builder()
+
                 .batchCode(req.getBatchCode())
+
                 .station(station)
+
                 .processType(req.getProcessType())
+
                 .fermentationStart(req.getFermentationStart())
                 .fermentationEnd(req.getFermentationEnd())
+
                 .dryingStart(req.getDryingStart())
                 .dryingEnd(req.getDryingEnd())
-                .totalCherryKg(req.getTotalCherryKg())
+
+                // Calculated automatically
+                .totalCherryKg(totalCherryKg)
+
+                // User input
                 .parchmentKg(req.getParchmentKg())
-                .status("CREATED")
-                .qrCode(qr)
+
+                // Dates
+                .createdAt(LocalDate.now())
+
+                .status("OPEN")
+
+                .qrCode(qrCode)
+
                 .build();
 
-        Batch saved = batchRepo.save(batch);
+        Batch savedBatch = batchRepo.save(batch);
 
-        // Attach deliveries to batch
-        for (FarmerDelivery d : deliveries) {
-            d.setBatch(saved);
+        // ==========================================================
+        // Attach Deliveries
+        // ==========================================================
+
+        for (FarmerDelivery delivery : deliveries) {
+            delivery.setBatch(savedBatch);
         }
+
         deliveryRepo.saveAll(deliveries);
 
-        return saved;
+        return savedBatch;
     }
-
 
     @Transactional
-    public Batch attachDeliveriesToBatch(UUID batchId, List<UUID> deliveryIds) {
+    public Batch attachDeliveriesToBatch(
+            UUID batchId,
+            List<UUID> deliveryIds) {
 
         Batch batch = batchRepo.findById(batchId)
-                .orElseThrow(() -> new IllegalArgumentException("Batch not found"));
+                .orElseThrow(() ->
+                        new IllegalArgumentException("Batch not found"));
 
-        List<FarmerDelivery> deliveries = deliveryRepo.findAllById(deliveryIds);
+        List<FarmerDelivery> deliveries =
+                deliveryRepo.findAllById(deliveryIds);
+
         if (deliveries.isEmpty()) {
-            throw new IllegalArgumentException("No deliveries found for given ids");
+            throw new IllegalArgumentException(
+                    "No deliveries found.");
         }
 
-        double totalCherry = batch.getTotalCherryKg() != null ? batch.getTotalCherryKg() : 0.0;
+        double total = batch.getTotalCherryKg() == null
+                ? 0
+                : batch.getTotalCherryKg();
 
         for (FarmerDelivery d : deliveries) {
+
+            if (d.getBatch() != null) {
+                throw new IllegalArgumentException(
+                        "Delivery "
+                                + d.getReceiptNumber()
+                                + " already belongs to batch "
+                                + d.getBatch().getBatchCode());
+            }
+
             d.setBatch(batch);
-            totalCherry += d.getCherryKg() != null ? d.getCherryKg() : 0.0;
+
+            total += d.getCherryKg() == null
+                    ? 0
+                    : d.getCherryKg();
         }
 
-        batch.setTotalCherryKg(totalCherry);
+        batch.setTotalCherryKg(total);
 
         deliveryRepo.saveAll(deliveries);
+
         return batchRepo.save(batch);
     }
+    public List<Batch> searchBatches(String keyword) {
+        if (keyword == null || keyword.isBlank()) {
+            return List.of();
+        }
+
+        return batchRepo
+                .findTop8ByBatchCodeContainingIgnoreCaseOrderByBatchCodeAsc(keyword);
+    }
+
+//    public Batch createBatch(BatchCreateRequest req) {
+//
+//        if (req.getStationId() == null) throw new IllegalArgumentException("stationId is required");
+//        if (req.getBatchCode() == null || req.getBatchCode().isBlank()) throw new IllegalArgumentException("batchCode is required");
+//        if (req.getProcessType() == null || req.getProcessType().isBlank()) throw new IllegalArgumentException("processType is required");
+//        if (req.getDeliveryIds() == null || req.getDeliveryIds().isEmpty()) throw new IllegalArgumentException("deliveryIds is required");
+//
+//        if (batchRepo.existsByBatchCode(req.getBatchCode())) {
+//            throw new IllegalArgumentException("batchCode already exists: " + req.getBatchCode());
+//        }
+//
+//        Actor station = actorRepo.findById(req.getStationId())
+//                .orElseThrow(() -> new IllegalArgumentException("Invalid stationId"));
+//
+//        List<FarmerDelivery> deliveries = deliveryRepo.findAllById(req.getDeliveryIds());
+//        if (deliveries.size() != req.getDeliveryIds().size()) {
+//            throw new IllegalArgumentException("Some deliveryIds not found");
+//        }
+//
+//        // Validate deliveries
+//        for (FarmerDelivery d : deliveries) {
+//            if (d.getBatch() != null) {
+//                throw new ResponseStatusException(
+//                        HttpStatus.CONFLICT,
+//                        "Delivery already assigned to another batch"
+//                );
+//            }
+////            if (d.getBatch() != null) {
+////                throw new IllegalArgumentException("Delivery already assigned to batch: " + d.getId());
+////            }
+//            if (d.getWashingStation() == null || !d.getWashingStation().getId().equals(station.getId())) {
+//                throw new IllegalArgumentException("Delivery station mismatch: " + d.getId());
+//            }
+//        }
+//
+//        // Create QR token (simple)
+//        String qr = "QR-" + req.getBatchCode();
+//
+//        Batch batch = Batch.builder()
+//                .batchCode(req.getBatchCode())
+//                .station(station)
+//                .processType(req.getProcessType())
+//                .fermentationStart(req.getFermentationStart())
+//                .fermentationEnd(req.getFermentationEnd())
+//                .dryingStart(req.getDryingStart())
+//                .dryingEnd(req.getDryingEnd())
+//                .totalCherryKg(req.getTotalCherryKg())
+//                .parchmentKg(req.getParchmentKg())
+//                .status("CREATED")
+//                .qrCode(qr)
+//                .build();
+//
+//        Batch saved = batchRepo.save(batch);
+//
+//        // Attach deliveries to batch
+//        for (FarmerDelivery d : deliveries) {
+//            d.setBatch(saved);
+//        }
+//        deliveryRepo.saveAll(deliveries);
+//
+//        return saved;
+//    }
+//
+//
+//    @Transactional
+//    public Batch attachDeliveriesToBatch(UUID batchId, List<UUID> deliveryIds) {
+//
+//        Batch batch = batchRepo.findById(batchId)
+//                .orElseThrow(() -> new IllegalArgumentException("Batch not found"));
+//
+//        List<FarmerDelivery> deliveries = deliveryRepo.findAllById(deliveryIds);
+//        if (deliveries.isEmpty()) {
+//            throw new IllegalArgumentException("No deliveries found for given ids");
+//        }
+//
+//        double totalCherry = batch.getTotalCherryKg() != null ? batch.getTotalCherryKg() : 0.0;
+//
+//        for (FarmerDelivery d : deliveries) {
+//            d.setBatch(batch);
+//            totalCherry += d.getCherryKg() != null ? d.getCherryKg() : 0.0;
+//        }
+//
+//        batch.setTotalCherryKg(totalCherry);
+//
+//        deliveryRepo.saveAll(deliveries);
+//        return batchRepo.save(batch);
+//    }
 
     // ---------- DRY MILL BATCH ----------------------------------------------
 

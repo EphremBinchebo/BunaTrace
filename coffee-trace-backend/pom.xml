@@ -1,42 +1,52 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="https://maven.apache.org/POM/4.0.0
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.3.2</version>
+        <relativePath/>
+    </parent>
+
     <groupId>com.coffeetrace</groupId>
     <artifactId>coffee-trace-backend</artifactId>
     <version>1.0.0</version>
+    <name>coffee-trace-backend</name>
+    <description>BunaTrace Backend</description>
 
     <properties>
-        <java.version>17</java.version>
-        <spring.boot.version>3.3.2</spring.boot.version>
+        <java.version>21</java.version>
     </properties>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring.boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <dependencies>
 
-        <!-- Spring Boot -->
+        <!-- Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- Spring Security -->
+        <!-- Security -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <!-- JPA -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- MySQL -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <scope>runtime</scope>
         </dependency>
 
         <!-- JWT -->
@@ -45,68 +55,32 @@
             <artifactId>jjwt-api</artifactId>
             <version>0.11.5</version>
         </dependency>
+
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-impl</artifactId>
             <version>0.11.5</version>
             <scope>runtime</scope>
         </dependency>
+
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-jackson</artifactId>
             <version>0.11.5</version>
             <scope>runtime</scope>
         </dependency>
-        <!-- H2 in-memory database for testing -->
-<!--        <dependency>-->
-<!--            <groupId>com.h2database</groupId>-->
-<!--            <artifactId>h2</artifactId>-->
-<!--            <scope>runtime</scope>-->
-<!--        </dependency>-->
-
-        <!-- JPA + MySQL -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-
-        <dependency>
-                  <groupId>com.mysql</groupId>
-                 <artifactId>mysql-connector-j</artifactId>
-                 <version>8.3.0</version>
-        </dependency>
-
-<!--        <dependency>-->
-<!--            <groupId>mysql</groupId>-->
-<!--            <artifactId>mysql-connector-j</artifactId>-->
-<!--            <version>9.0.0</version>-->
-<!--        </dependency>-->
 
         <!-- Lombok -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+
+        <!-- Testing -->
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.10.2</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
 
@@ -114,58 +88,37 @@
 
     <build>
         <plugins>
+
+            <!-- Java 21 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
                 <configuration>
-                    <source>17</source>
-                    <target>17</target>
-                    <compilerArgs>
-                        <arg>-parameters</arg>
-                    </compilerArgs>
+                    <release>21</release>
+                    <parameters>true</parameters>
                 </configuration>
             </plugin>
 
-            <!-- For Lombok to work -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
-                <configuration>
-                    <source>17</source>
-                    <target>17</target>
-                    <annotationProcessorPaths>
-                        <path>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                            <version>1.18.30</version>
-                        </path>
-                    </annotationProcessorPaths>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <compilerArgs>
-                        <arg>-parameters</arg>
-                    </compilerArgs>
-                </configuration>
-            </plugin>
-
+            <!-- Spring Boot Executable Jar -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.coffeetrace.CoffeeTraceApplication</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
+
         </plugins>
     </build>
 
 </project>
-
-
-
-
 
 <!--<project xmlns="http://maven.apache.org/POM/4.0.0"-->
 <!--         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
@@ -173,69 +126,35 @@
 <!--         http://maven.apache.org/xsd/maven-4.0.0.xsd">-->
 
 <!--    <modelVersion>4.0.0</modelVersion>-->
-
-<!--    <groupId>com.coffeetrace</groupId>-->
-<!--    <artifactId>coffee-trace-backend</artifactId>-->
-<!--    <version>1.0.0</version>-->
-
-<!--    &lt;!&ndash; ⭐ Use stable Spring Boot &ndash;&gt;-->
 <!--    <parent>-->
 <!--        <groupId>org.springframework.boot</groupId>-->
 <!--        <artifactId>spring-boot-starter-parent</artifactId>-->
 <!--        <version>3.3.2</version>-->
+<!--        <relativePath/>-->
 <!--    </parent>-->
+<!--    <groupId>com.coffeetrace</groupId>-->
+<!--    <artifactId>coffee-trace-backend</artifactId>-->
+<!--    <version>1.0.0</version>-->
 
 <!--    <properties>-->
-<!--        <java.version>17</java.version>-->
+<!--        <java.version>21</java.version>-->
 <!--    </properties>-->
 
 <!--    <dependencies>-->
 
-<!--        &lt;!&ndash; Web &ndash;&gt;-->
+<!--        &lt;!&ndash; Spring Boot &ndash;&gt;-->
 <!--        <dependency>-->
 <!--            <groupId>org.springframework.boot</groupId>-->
 <!--            <artifactId>spring-boot-starter-web</artifactId>-->
 <!--        </dependency>-->
 
-<!--        &lt;!&ndash; JPA &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-data-jpa</artifactId>-->
-<!--        </dependency>-->
-
-<!--        &lt;!&ndash; Security &ndash;&gt;-->
+<!--        &lt;!&ndash; Spring Security &ndash;&gt;-->
 <!--        <dependency>-->
 <!--            <groupId>org.springframework.boot</groupId>-->
 <!--            <artifactId>spring-boot-starter-security</artifactId>-->
 <!--        </dependency>-->
 
 <!--        &lt;!&ndash; JWT &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>com.auth0</groupId>-->
-<!--            <artifactId>java-jwt</artifactId>-->
-<!--            <version>4.4.0</version>-->
-<!--        </dependency>-->
-
-<!--        &lt;!&ndash; MySQL &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>com.mysql</groupId>-->
-<!--            <artifactId>mysql-connector-j</artifactId>-->
-<!--            <version>8.3.0</version>-->
-<!--        </dependency>-->
-
-<!--        &lt;!&ndash; Lombok &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.projectlombok</groupId>-->
-<!--            <artifactId>lombok</artifactId>-->
-<!--            <optional>true</optional>-->
-<!--        </dependency>-->
-
-<!--        &lt;!&ndash; Validation &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>jakarta.validation</groupId>-->
-<!--            <artifactId>jakarta.validation-api</artifactId>-->
-<!--        </dependency>-->
-<!--        &lt;!&ndash; JSON Web Token (JJWT) &ndash;&gt;-->
 <!--        <dependency>-->
 <!--            <groupId>io.jsonwebtoken</groupId>-->
 <!--            <artifactId>jjwt-api</artifactId>-->
@@ -249,19 +168,98 @@
 <!--        </dependency>-->
 <!--        <dependency>-->
 <!--            <groupId>io.jsonwebtoken</groupId>-->
-<!--            <artifactId>jjwt-jackson</artifactId> &lt;!&ndash; OR jjwt-gson &ndash;&gt;-->
+<!--            <artifactId>jjwt-jackson</artifactId>-->
 <!--            <version>0.11.5</version>-->
 <!--            <scope>runtime</scope>-->
+<!--        </dependency>-->
+<!--        &lt;!&ndash; H2 in-memory database for testing &ndash;&gt;-->
+
+<!--        &lt;!&ndash; JPA + MySQL &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-data-jpa</artifactId>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>com.mysql</groupId>-->
+<!--            <artifactId>mysql-connector-j</artifactId>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; Lombok &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-test</artifactId>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.projectlombok</groupId>-->
+<!--            <artifactId>lombok</artifactId>-->
+<!--            <optional>true</optional>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.junit.jupiter</groupId>-->
+<!--            <artifactId>junit-jupiter</artifactId>-->
+<!--            <version>5.10.2</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+<!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;            <groupId>junit</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <artifactId>junit</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <scope>test</scope>&ndash;&gt;-->
+<!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.junit.jupiter</groupId>-->
+<!--            <artifactId>junit-jupiter</artifactId>-->
+<!--            <scope>test</scope>-->
 <!--        </dependency>-->
 
 <!--    </dependencies>-->
 
 <!--    <build>-->
 <!--        <plugins>-->
+<!--&lt;!&ndash;            <plugin>&ndash;&gt;-->
+<!--&lt;!&ndash;                <groupId>org.apache.maven.plugins</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;                <artifactId>maven-compiler-plugin</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;                <version>3.11.0</version>&ndash;&gt;-->
+<!--&lt;!&ndash;                <configuration>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <source>17</source>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <target>17</target>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <compilerArgs>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <arg>-parameters</arg>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </compilerArgs>&ndash;&gt;-->
+<!--&lt;!&ndash;                </configuration>&ndash;&gt;-->
+<!--&lt;!&ndash;            </plugin>&ndash;&gt;-->
+
+<!--            &lt;!&ndash; For Lombok to work &ndash;&gt;-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-compiler-plugin</artifactId>-->
+<!--                <version>3.11.0</version>-->
+<!--                <configuration>-->
+<!--                    <source>21</source>-->
+<!--                    <target>21</target>-->
+<!--                    <annotationProcessorPaths>-->
+<!--                        <path>-->
+<!--                            <groupId>org.projectlombok</groupId>-->
+<!--                            <artifactId>lombok</artifactId>-->
+<!--                            <version>1.18.30</version>-->
+<!--                        </path>-->
+<!--                    </annotationProcessorPaths>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
 <!--            <plugin>-->
 <!--                <groupId>org.springframework.boot</groupId>-->
 <!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <goals>-->
+<!--                            <goal>repackage</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
 <!--            </plugin>-->
 <!--        </plugins>-->
 <!--    </build>-->
+
 <!--</project>-->
+

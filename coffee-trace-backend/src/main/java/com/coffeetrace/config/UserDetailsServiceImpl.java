@@ -30,24 +30,3 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     }
 }
 
-
-//@Service
-//@RequiredArgsConstructor
-//public class UserDetailsServiceImpl implements UserDetailsService {
-//
-//    private final UserRepository userRepo;
-//
-//    @Override
-//    public UserDetails loadUserByUsername(String username)
-//            throws UsernameNotFoundException {
-//
-//        AppUser user = userRepo.findByUsername(username)
-//                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
-//
-//        return User.builder()
-//                .username(user.getUsername())
-//                .password(user.getPassword())
-//                .roles(user.getRole().name())
-//                .build();
-//    }
-//}

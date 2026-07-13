@@ -17,8 +17,8 @@ public class FarmMapper {
                         farm.getFarmer() != null ? farm.getFarmer().getName() : null
                 )
                 .variety(farm.getVariety())
-                .elevationM(farm.getElevationM())
-                .areaHa(farm.getAreaHa())
+                .elevationM(farm.getElevation())
+                .areaHa(farm.getAreaHectares())
                 .region(farm.getRegion())
                 .zone(farm.getZone())
                 .woreda(farm.getWoreda())

@@ -26,24 +26,6 @@ public class DeliveryController {
     private final FarmerDeliveryRepository deliveryRepo;
 
 
-//    @PostMapping
-//    public ResponseEntity<?> createDelivery(@RequestBody DeliveryRequest req) {
-//        try {
-//            FarmerDelivery saved = deliveryService.createDelivery(req);
-//            return ResponseEntity.ok(saved);
-//
-//        } catch (IllegalArgumentException ex) {
-//            return ResponseEntity.badRequest().body(ex.getMessage());
-//
-//        } catch (Exception e) {
-//            return ResponseEntity.internalServerError().body("Server error: " + e.getMessage());
-//        }
-//    }
-
-    @GetMapping
-    public ResponseEntity<?> getAllDeliveries() {
-        return ResponseEntity.ok("TODO: return list of deliveries if needed");
-    }
 
     @PostMapping
     public ResponseEntity<?> createDelivery(@RequestBody DeliveryRequest req) {
@@ -102,6 +84,25 @@ public class DeliveryController {
                 );
 
         return ResponseEntity.ok(delivery);
+    }
+
+    @GetMapping
+    public List<FarmerDeliveryView> listDeliveries(
+            @RequestParam(required = false) UUID stationId,
+            @RequestParam(required = false) Boolean unbatched
+    ) {
+        if (stationId != null && Boolean.TRUE.equals(unbatched)) {
+            return deliveryRepo
+                    .findByWashingStationIdAndBatchIsNull(stationId)
+                    .stream()
+                    .map(FarmerDeliveryView::from)
+                    .toList();
+        }
+
+        return deliveryRepo.findAll()
+                .stream()
+                .map(FarmerDeliveryView::from)
+                .toList();
     }
 
 

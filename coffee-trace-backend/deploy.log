@@ -1,0 +1,592 @@
+2026-07-04 17:14:51,248 (DEBUG) cement.core.foundation : laying cement for the 'eb' application
+2026-07-04 17:14:51,249 (DEBUG) cement.core.hook : defining hook 'pre_setup'
+2026-07-04 17:14:51,249 (DEBUG) cement.core.hook : defining hook 'post_setup'
+2026-07-04 17:14:51,249 (DEBUG) cement.core.hook : defining hook 'pre_run'
+2026-07-04 17:14:51,249 (DEBUG) cement.core.hook : defining hook 'post_run'
+2026-07-04 17:14:51,249 (DEBUG) cement.core.hook : defining hook 'pre_argument_parsing'
+2026-07-04 17:14:51,249 (DEBUG) cement.core.hook : defining hook 'post_argument_parsing'
+2026-07-04 17:14:51,249 (DEBUG) cement.core.hook : defining hook 'pre_close'
+2026-07-04 17:14:51,249 (DEBUG) cement.core.hook : defining hook 'post_close'
+2026-07-04 17:14:51,249 (DEBUG) cement.core.hook : defining hook 'signal'
+2026-07-04 17:14:51,250 (DEBUG) cement.core.hook : defining hook 'pre_render'
+2026-07-04 17:14:51,250 (DEBUG) cement.core.hook : defining hook 'post_render'
+2026-07-04 17:14:51,250 (DEBUG) cement.core.hook : registering hook 'add_handler_override_options' from cement.core.foundation into hooks['post_setup']
+2026-07-04 17:14:51,250 (DEBUG) cement.core.hook : registering hook 'handler_override' from cement.core.foundation into hooks['post_argument_parsing']
+2026-07-04 17:14:51,250 (DEBUG) cement.core.handler : defining handler type 'extension' (IExtension)
+2026-07-04 17:14:51,250 (DEBUG) cement.core.handler : defining handler type 'log' (ILog)
+2026-07-04 17:14:51,250 (DEBUG) cement.core.handler : defining handler type 'config' (IConfig)
+2026-07-04 17:14:51,250 (DEBUG) cement.core.handler : defining handler type 'mail' (IMail)
+2026-07-04 17:14:51,250 (DEBUG) cement.core.handler : defining handler type 'plugin' (IPlugin)
+2026-07-04 17:14:51,250 (DEBUG) cement.core.handler : defining handler type 'output' (IOutput)
+2026-07-04 17:14:51,250 (DEBUG) cement.core.handler : defining handler type 'argument' (IArgument)
+2026-07-04 17:14:51,250 (DEBUG) cement.core.handler : defining handler type 'controller' (IController)
+2026-07-04 17:14:51,250 (DEBUG) cement.core.handler : defining handler type 'cache' (ICache)
+2026-07-04 17:14:51,251 (DEBUG) cement.core.handler : registering handler '<class 'cement.core.extension.CementExtensionHandler'>' into handlers['extension']['cement']
+2026-07-04 17:14:51,278 (DEBUG) cement.ext.ext_plugin : plugin config dir /etc/eb/plugins.d does not exist.
+2026-07-04 17:14:51,278 (DEBUG) cement.ext.ext_plugin : plugin config dir /Users/ephrembinchebo/.eb/plugins.d does not exist.
+2026-07-04 17:14:51,285 (DEBUG) ebcli.core.hooks : -- EBCLI Version: 3.27.3
+2026-07-04 17:14:51,285 (DEBUG) ebcli.core.hooks : -- Python Version: 3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 17.0.0 (clang-1700.6.4.2)]
+2026-07-04 17:14:51,286 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:51,289 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:51,291 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:51,292 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:51,295 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:51,296 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:51,298 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:51,300 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:51,302 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:51,304 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:51,305 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:51,307 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:51,309 (DEBUG) ebcli.lib.elasticbeanstalk : Inside get_environment api wrapper
+2026-07-04 17:14:51,310 (DEBUG) ebcli.lib.aws : Creating new Botocore Session
+2026-07-04 17:14:51,310 (DEBUG) ebcli.lib.aws : Botocore version: 1.43.37
+2026-07-04 17:14:51,319 (DEBUG) ebcli.lib.aws : Creating new Botocore Client for elasticbeanstalk
+2026-07-04 17:14:51,458 (DEBUG) ebcli.lib.aws : Successfully created session for elasticbeanstalk
+2026-07-04 17:14:51,458 (DEBUG) ebcli.lib.aws : Making api call: (elasticbeanstalk, describe_environments) to region: us-east-2 with args:{'IncludeDeleted': False, 'EnvironmentNames': ['bunatrace-prod-v2']}
+2026-07-04 17:14:51,834 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:14:51,834 (DEBUG) ebcli.lib.aws : Response: {'Environments': [{'EnvironmentName': 'bunatrace-prod-v2', 'EnvironmentId': 'e-nzkjz6ij8h', 'ApplicationName': 'BunaTrace', 'VersionLabel': 'app-260704_165343222774', 'SolutionStackName': '64bit Amazon Linux 2023 v4.12.3 running Corretto 21', 'PlatformArn': 'arn:aws:elasticbeanstalk:us-east-2::platform/Corretto 21 running on 64bit Amazon Linux 2023/4.12.3', 'Description': 'Environment created from the EB CLI using "eb create"', 'EndpointURL': 'awseb--AWSEB-UfVj9nja9B9A-1075466191.us-east-2.elb.amazonaws.com', 'CNAME': 'bunatrace-prod-v2.eba-rfqt7cge.us-east-2.elasticbeanstalk.com', 'DateCreated': datetime.datetime(2026, 7, 4, 23, 54, 0, 161000, tzinfo=tzutc()), 'DateUpdated': datetime.datetime(2026, 7, 5, 0, 11, 21, 404000, tzinfo=tzutc()), 'Status': 'Ready', 'AbortableOperationInProgress': False, 'Health': 'Red', 'HealthStatus': 'Severe', 'Alerts': [], 'Tier': {'Name': 'WebServer', 'Type': 'Standard', 'Version': '1.0'}, 'EnvironmentLinks': [], 'EnvironmentArn': 'arn:aws:elasticbeanstalk:us-east-2:479279107694:environment/BunaTrace/bunatrace-prod-v2'}], 'ResponseMetadata': {'RequestId': 'cdf49097-ccdf-4673-a8fa-db2cdbb10653', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:51 GMT', 'RetryAttempts': 0}}
+2026-07-04 17:14:51,835 (DEBUG) ebcli.lib.elasticbeanstalk : Inside describe_platform_version api wrapper
+2026-07-04 17:14:51,835 (DEBUG) ebcli.lib.aws : Making api call: (elasticbeanstalk, describe_platform_version) to region: us-east-2 with args:{'PlatformArn': 'arn:aws:elasticbeanstalk:us-east-2::platform/Corretto 21 running on 64bit Amazon Linux 2023/4.12.3'}
+2026-07-04 17:14:51,991 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:14:51,991 (DEBUG) ebcli.lib.aws : Response: {'PlatformDescription': {'PlatformArn': 'arn:aws:elasticbeanstalk:us-east-2::platform/Corretto 21 running on 64bit Amazon Linux 2023/4.12.3', 'PlatformOwner': 'AWSElasticBeanstalk', 'PlatformName': 'Corretto 21 running on 64bit Amazon Linux 2023', 'PlatformVersion': '4.12.3', 'SolutionStackName': '64bit Amazon Linux 2023 v4.12.3 running Corretto 21', 'PlatformStatus': 'Ready', 'DateCreated': datetime.datetime(2026, 6, 29, 16, 4, 48, 856000, tzinfo=tzutc()), 'DateUpdated': datetime.datetime(2026, 6, 29, 21, 14, 33, 261000, tzinfo=tzutc()), 'PlatformCategory': 'Corretto', 'Description': '64bit Amazon Linux 2023 running Corretto 21', 'Maintainer': 'aws-elasticbeanstalk-platforms@amazon.com', 'OperatingSystemName': 'Amazon Linux', 'OperatingSystemVersion': '2023', 'ProgrammingLanguages': [{'Name': 'Corretto', 'Version': '21'}], 'Frameworks': [{'Name': '', 'Version': ''}], 'CustomAmiList': [{'VirtualizationType': 'pv', 'ImageId': ''}, {'VirtualizationType': 'hvm', 'ImageId': 'ami-0d2fa666e27fbb983'}], 'SupportedTierList': ['WebServer/Standard', 'Worker/SQS/HTTP'], 'SupportedAddonList': ['Log/CloudWatch', 'Log/S3', 'Monitoring/Healthd', 'WorkerDaemon/SQSD'], 'PlatformLifecycleState': 'Recommended', 'PlatformBranchName': 'Corretto 21 running on 64bit Amazon Linux 2023', 'PlatformBranchLifecycleState': 'Supported'}, 'ResponseMetadata': {'RequestId': '7317bbc8-f4e4-4a65-8904-d97ceea4be35', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:52 GMT', 'RetryAttempts': 0}}
+2026-07-04 17:14:51,992 (DEBUG) ebcli.lib.elasticbeanstalk : Inside list_platform_branches api wrapper
+2026-07-04 17:14:51,992 (DEBUG) ebcli.lib.aws : Making api call: (elasticbeanstalk, list_platform_branches) to region: us-east-2 with args:{'Filters': [{'Attribute': 'BranchName', 'Operator': '=', 'Values': ['Corretto 21 running on 64bit Amazon Linux 2023']}]}
+2026-07-04 17:14:52,107 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:14:52,107 (DEBUG) ebcli.lib.aws : Response: {'PlatformBranchSummaryList': [{'PlatformName': 'Java', 'BranchName': 'Corretto 21 running on 64bit Amazon Linux 2023', 'BranchOrder': '11300', 'LifecycleState': 'Supported', 'SupportedTierList': ['WebServer/Standard', 'Worker/SQS/HTTP']}], 'ResponseMetadata': {'RequestId': '546f8148-689d-4fc3-b3e9-cd81c51057e5', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:52 GMT', 'RetryAttempts': 0}}
+2026-07-04 17:14:52,107 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:52,107 (INFO) eb : Deploying code to bunatrace-prod-v2 in region us-east-2
+2026-07-04 17:14:52,108 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:52,110 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:52,112 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:52,114 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:52,116 (DEBUG) ebcli.operations.gitops : Branch not found
+2026-07-04 17:14:52,116 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:52,117 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:52,119 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:52,120 (DEBUG) ebcli.lib.elasticbeanstalk : Inside get_application_versions api wrapper
+2026-07-04 17:14:52,120 (DEBUG) ebcli.lib.aws : Making api call: (elasticbeanstalk, describe_application_versions) to region: us-east-2 with args:{'ApplicationName': 'BunaTrace', 'VersionLabels': ['app-260704_171452119043']}
+2026-07-04 17:14:52,252 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:14:52,252 (DEBUG) ebcli.lib.aws : Response: {'ApplicationVersions': [], 'ResponseMetadata': {'RequestId': '60d8c1ca-e5ef-44ec-a9c7-48c0c41ab04a', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:52 GMT', 'RetryAttempts': 0}}
+2026-07-04 17:14:52,252 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:52,258 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:52,261 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:52,300 (INFO) eb : Found .ebignore, using system zip.
+2026-07-04 17:14:52,300 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:52,300 (INFO) eb : Zipping up folder at location: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:52,301 (INFO) eb :   -skipping: ./.DS_Store
+2026-07-04 17:14:52,301 (INFO) eb :  +adding: .//
+2026-07-04 17:14:52,302 (INFO) eb :   +adding: ./mvnw.cmd
+2026-07-04 17:14:52,304 (INFO) eb :   +adding: ./pom.xml
+2026-07-04 17:14:52,305 (INFO) eb :   -skipping: ./Dockerfile.bak
+2026-07-04 17:14:52,305 (INFO) eb :   +adding: ./deploy.log
+2026-07-04 17:14:52,306 (INFO) eb :   +adding: ./.gitignore
+2026-07-04 17:14:52,307 (INFO) eb :   +adding: ./.gitattributes
+2026-07-04 17:14:52,308 (INFO) eb :   -skipping: ./.ebignore
+2026-07-04 17:14:52,308 (INFO) eb :   +adding: ./mvnw
+2026-07-04 17:14:52,309 (INFO) eb :  +adding: ./target/
+2026-07-04 17:14:52,310 (INFO) eb :   +adding: ./target/coffee-trace-backend-1.0.0.jar
+2026-07-04 17:14:54,297 (INFO) eb :   -skipping: ./target/test-classes/com/coffeetrace/coffee_trace_backend/CoffeeTraceBackendApplicationTests.class
+2026-07-04 17:14:54,298 (INFO) eb :   -skipping: ./target/test-classes/com/coffeetrace/coffee_trace_backend/FarmAndFarmerTests.class
+2026-07-04 17:14:54,298 (INFO) eb :  +adding: ./target/classes/
+2026-07-04 17:14:54,298 (INFO) eb :   +adding: ./target/classes/appcommand
+2026-07-04 17:14:54,304 (INFO) eb :   +adding: ./target/classes/application.properties
+2026-07-04 17:14:54,306 (INFO) eb :  +adding: ./target/classes/static/
+2026-07-04 17:14:54,306 (INFO) eb :   +adding: ./target/classes/static/qr.html
+2026-07-04 17:14:54,307 (INFO) eb :  +adding: ./target/classes/db/migration/
+2026-07-04 17:14:54,307 (INFO) eb :   +adding: ./target/classes/db/migration/V1__init_schema_mysql.sql
+2026-07-04 17:14:54,308 (INFO) eb :  +adding: ./target/classes/com/coffeetrace/
+2026-07-04 17:14:54,308 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/CoffeeTraceApplication.class
+2026-07-04 17:14:54,309 (INFO) eb :  +adding: ./target/classes/com/coffeetrace/importside/
+2026-07-04 17:14:54,309 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/importside/ImportProduct.class
+2026-07-04 17:14:54,310 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/importside/ImportRoastBatchRepository.class
+2026-07-04 17:14:54,310 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/importside/ImportProductRepository.class
+2026-07-04 17:14:54,311 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/importside/ImportProduct$ImportProductBuilder.class
+2026-07-04 17:14:54,311 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/importside/ImportRoastBatch$ImportRoastBatchBuilder.class
+2026-07-04 17:14:54,312 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/importside/ImportRoastBatch.class
+2026-07-04 17:14:54,313 (INFO) eb :  +adding: ./target/classes/com/coffeetrace/trace/
+2026-07-04 17:14:54,314 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/trace/FarmerContributionDto.class
+2026-07-04 17:14:54,315 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/trace/TraceabilityService.class
+2026-07-04 17:14:54,317 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/trace/TraceController.class
+2026-07-04 17:14:54,317 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/trace/ProcessingStepView.class
+2026-07-04 17:14:54,318 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/trace/FarmView$FarmViewBuilder.class
+2026-07-04 17:14:54,319 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/trace/ShipmentInfo$ShipmentInfoBuilder.class
+2026-07-04 17:14:54,319 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/trace/ProcessingStepView$ProcessingStepViewBuilder.class
+2026-07-04 17:14:54,320 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/trace/FarmView.class
+2026-07-04 17:14:54,321 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/trace/FarmerContributionDto$FarmerContributionDtoBuilder.class
+2026-07-04 17:14:54,322 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/trace/ShipmentInfo.class
+2026-07-04 17:14:54,322 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/trace/ExportTraceDto$ExportTraceDtoBuilder.class
+2026-07-04 17:14:54,323 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/trace/ExportTraceDto.class
+2026-07-04 17:14:54,324 (INFO) eb :  +adding: ./target/classes/com/coffeetrace/config/
+2026-07-04 17:14:54,324 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/config/CorsConfig.class
+2026-07-04 17:14:54,325 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/config/UserDetailsServiceImpl.class
+2026-07-04 17:14:54,326 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/config/SecurityConfig.class
+2026-07-04 17:14:54,327 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/config/GlobalExceptionHandler.class
+2026-07-04 17:14:54,328 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/config/TraceabilitySeeder.class
+2026-07-04 17:14:54,329 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/config/JwtAuthFilter.class
+2026-07-04 17:14:54,330 (INFO) eb :  +adding: ./target/classes/com/coffeetrace/auth/
+2026-07-04 17:14:54,331 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/auth/Role.class
+2026-07-04 17:14:54,331 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/auth/UserRepository.class
+2026-07-04 17:14:54,332 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/auth/AppUser.class
+2026-07-04 17:14:54,333 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/auth/AppUser$AppUserBuilder.class
+2026-07-04 17:14:54,334 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/auth/AuthService.class
+2026-07-04 17:14:54,335 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/auth/AuthController.class
+2026-07-04 17:14:54,336 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/auth/JwtService.class
+2026-07-04 17:14:54,337 (INFO) eb :  +adding: ./target/classes/com/coffeetrace/auth/dto/
+2026-07-04 17:14:54,337 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/auth/dto/AuthRequest.class
+2026-07-04 17:14:54,338 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/auth/dto/AuthResponse$AuthResponseBuilder.class
+2026-07-04 17:14:54,339 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/auth/dto/RegisterRequest.class
+2026-07-04 17:14:54,339 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/auth/dto/AuthResponse.class
+2026-07-04 17:14:54,340 (INFO) eb :  +adding: ./target/classes/com/coffeetrace/processing/
+2026-07-04 17:14:54,340 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/processing/BatchWorkflowService.class
+2026-07-04 17:14:54,341 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/processing/BatchController.class
+2026-07-04 17:14:54,342 (INFO) eb :  +adding: ./target/classes/com/coffeetrace/processing/dto/
+2026-07-04 17:14:54,342 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/processing/dto/GreenLotCreateRequest.class
+2026-07-04 17:14:54,343 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/processing/dto/ShipmentCreateRequest.class
+2026-07-04 17:14:54,344 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/processing/dto/BatchCreateRequest.class
+2026-07-04 17:14:54,345 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/processing/dto/BatchView$BatchViewBuilder.class
+2026-07-04 17:14:54,346 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/processing/dto/DryMillBatchCreateRequest.class
+2026-07-04 17:14:54,347 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/processing/dto/BatchView.class
+2026-07-04 17:14:54,348 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/processing/dto/ExportLotCreateRequest.class
+2026-07-04 17:14:54,349 (INFO) eb :  +adding: ./target/classes/com/coffeetrace/qr/
+2026-07-04 17:14:54,349 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/qr/PublicQrController.class
+2026-07-04 17:14:54,350 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/qr/QrCode$QrCodeBuilder.class
+2026-07-04 17:14:54,351 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/qr/QrCodeRepository.class
+2026-07-04 17:14:54,352 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/qr/QrTraceService.class
+2026-07-04 17:14:54,353 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/qr/QrCode.class
+2026-07-04 17:14:54,353 (INFO) eb :  +adding: ./target/classes/com/coffeetrace/farms/
+2026-07-04 17:14:54,354 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/farms/FarmMapper.class
+2026-07-04 17:14:54,354 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/farms/Farm.class
+2026-07-04 17:14:54,355 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/farms/FarmRepository.class
+2026-07-04 17:14:54,356 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/farms/FarmService.class
+2026-07-04 17:14:54,356 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/farms/FarmController.class
+2026-07-04 17:14:54,357 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/farms/Farm$FarmBuilder.class
+2026-07-04 17:14:54,358 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/farms/FarmRequest.class
+2026-07-04 17:14:54,359 (INFO) eb :  +adding: ./target/classes/com/coffeetrace/supplychain/
+2026-07-04 17:14:54,359 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/supplychain/ExportLot$ExportLotBuilder.class
+2026-07-04 17:14:54,360 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/supplychain/GreenLotRepository.class
+2026-07-04 17:14:54,360 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/supplychain/ExportLot.class
+2026-07-04 17:14:54,361 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/supplychain/DryMillBatch$DryMillBatchBuilder.class
+2026-07-04 17:14:54,361 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/supplychain/Shipment.class
+2026-07-04 17:14:54,362 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/supplychain/ShipmentRepository.class
+2026-07-04 17:14:54,363 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/supplychain/GreenLot$GreenLotBuilder.class
+2026-07-04 17:14:54,363 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/supplychain/ExportLotRepository.class
+2026-07-04 17:14:54,364 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/supplychain/Shipment$ShipmentBuilder.class
+2026-07-04 17:14:54,365 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/supplychain/GreenLot.class
+2026-07-04 17:14:54,366 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/supplychain/DryMillBatch.class
+2026-07-04 17:14:54,367 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/supplychain/SupplyChainService.class
+2026-07-04 17:14:54,368 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/supplychain/DryMillBatchRepository.class
+2026-07-04 17:14:54,369 (INFO) eb :  +adding: ./target/classes/com/coffeetrace/dashboard/
+2026-07-04 17:14:54,369 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/dashboard/DashboardService.class
+2026-07-04 17:14:54,370 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/dashboard/ActivityRepository.class
+2026-07-04 17:14:54,370 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/dashboard/DashboardController.class
+2026-07-04 17:14:54,371 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/dashboard/ActivityService.class
+2026-07-04 17:14:54,371 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/dashboard/DashboardStatsResponse$DashboardStatsResponseBuilder.class
+2026-07-04 17:14:54,372 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/dashboard/DashboardStats$DashboardStatsBuilder.class
+2026-07-04 17:14:54,373 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/dashboard/ActivityLog.class
+2026-07-04 17:14:54,374 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/dashboard/DashboardStats.class
+2026-07-04 17:14:54,375 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/dashboard/DashboardStatsResponse.class
+2026-07-04 17:14:54,376 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/dashboard/ActivityLog$ActivityLogBuilder.class
+2026-07-04 17:14:54,376 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/dashboard/DashboardStatsController.class
+2026-07-04 17:14:54,377 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/dashboard/ActivityController.class
+2026-07-04 17:14:54,377 (INFO) eb :  +adding: ./target/classes/com/coffeetrace/batch/
+2026-07-04 17:14:54,377 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/batch/BatchRepository.class
+2026-07-04 17:14:54,378 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/batch/Batch$BatchBuilder.class
+2026-07-04 17:14:54,379 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/batch/Batch.class
+2026-07-04 17:14:54,380 (INFO) eb :  +adding: ./target/classes/com/coffeetrace/lot/
+2026-07-04 17:14:54,380 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/lot/LotRepository.class
+2026-07-04 17:14:54,381 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/lot/Lot.class
+2026-07-04 17:14:54,382 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/lot/Lot$LotBuilder.class
+2026-07-04 17:14:54,382 (INFO) eb :  +adding: ./target/classes/com/coffeetrace/users/
+2026-07-04 17:14:54,382 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/users/ActorRepository.class
+2026-07-04 17:14:54,383 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/users/ActorService$1.class
+2026-07-04 17:14:54,383 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/users/ActorType.class
+2026-07-04 17:14:54,384 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/users/ActorService.class
+2026-07-04 17:14:54,385 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/users/Actor$ActorBuilder.class
+2026-07-04 17:14:54,386 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/users/Actor.class
+2026-07-04 17:14:54,387 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/users/ActorController.class
+2026-07-04 17:14:54,388 (INFO) eb :  +adding: ./target/classes/com/coffeetrace/station/
+2026-07-04 17:14:54,388 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/station/StationCreateRequest.class
+2026-07-04 17:14:54,389 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/station/StationRepository.class
+2026-07-04 17:14:54,389 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/station/Station.class
+2026-07-04 17:14:54,390 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/station/Station$StationBuilder.class
+2026-07-04 17:14:54,391 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/station/StationService.class
+2026-07-04 17:14:54,392 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/station/StationController.class
+2026-07-04 17:14:54,392 (INFO) eb :  +adding: ./target/classes/com/coffeetrace/exporter/
+2026-07-04 17:14:54,393 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/exporter/ExporterService.class
+2026-07-04 17:14:54,394 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/exporter/ExporterController.class
+2026-07-04 17:14:54,395 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/exporter/CreateShipmentRequest.class
+2026-07-04 17:14:54,396 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/exporter/CreateExportLotRequest.class
+2026-07-04 17:14:54,397 (INFO) eb :  +adding: ./target/classes/com/coffeetrace/publicapi/
+2026-07-04 17:14:54,397 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/publicapi/PublicTraceResponse.class
+2026-07-04 17:14:54,398 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/publicapi/PublicTraceController.class
+2026-07-04 17:14:54,399 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/publicapi/PublicTraceResponse$JourneyStep.class
+2026-07-04 17:14:54,400 (INFO) eb :  +adding: ./target/classes/com/coffeetrace/actor/
+2026-07-04 17:14:54,400 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/actor/FarmerController.class
+2026-07-04 17:14:54,401 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/actor/FarmerService.class
+2026-07-04 17:14:54,402 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/actor/FarmerRepository.class
+2026-07-04 17:14:54,403 (INFO) eb :  +adding: ./target/classes/com/coffeetrace/deliveries/
+2026-07-04 17:14:54,403 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/deliveries/FarmerDelivery$FarmerDeliveryBuilder.class
+2026-07-04 17:14:54,404 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/deliveries/FarmerDeliveryView.class
+2026-07-04 17:14:54,405 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/deliveries/DeliveryController.class
+2026-07-04 17:14:54,406 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/deliveries/FarmerDelivery.class
+2026-07-04 17:14:54,407 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/deliveries/FarmerDeliveryRepository.class
+2026-07-04 17:14:54,408 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/deliveries/FarmerDeliveryView$FarmerDeliveryViewBuilder.class
+2026-07-04 17:14:54,408 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/deliveries/DeliveryService.class
+2026-07-04 17:14:54,409 (INFO) eb :  +adding: ./target/classes/com/coffeetrace/deliveries/dto/
+2026-07-04 17:14:54,409 (INFO) eb :   +adding: ./target/classes/com/coffeetrace/deliveries/dto/DeliveryRequest.class
+2026-07-04 17:14:54,410 (INFO) eb :  +adding: ./target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/
+2026-07-04 17:14:54,410 (INFO) eb :   +adding: ./target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+2026-07-04 17:14:54,411 (INFO) eb :   +adding: ./target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+2026-07-04 17:14:54,411 (INFO) eb :  +adding: ./target/maven-status/maven-compiler-plugin/compile/default-compile/
+2026-07-04 17:14:54,412 (INFO) eb :   +adding: ./target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+2026-07-04 17:14:54,412 (INFO) eb :   +adding: ./target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+2026-07-04 17:14:54,413 (INFO) eb :  +adding: ./target/maven-archiver/
+2026-07-04 17:14:54,413 (INFO) eb :   +adding: ./target/maven-archiver/pom.properties
+2026-07-04 17:14:54,414 (INFO) eb :   -skipping: ./.elasticbeanstalk
+2026-07-04 17:14:54,414 (INFO) eb :   -skipping: ./.elasticbeanstalk/app_versions
+2026-07-04 17:14:54,414 (INFO) eb :   -skipping: ./.elasticbeanstalk/logs
+2026-07-04 17:14:54,414 (INFO) eb :   -skipping: ./.elasticbeanstalk/logs/260704_170320
+2026-07-04 17:14:54,414 (INFO) eb :   -skipping: ./.elasticbeanstalk/logs/260704_170320/i-06c19b05b7f450eca
+2026-07-04 17:14:54,414 (INFO) eb :   -skipping: ./.elasticbeanstalk/logs/260704_170320/i-06c19b05b7f450eca/var
+2026-07-04 17:14:54,414 (INFO) eb :   -skipping: ./.elasticbeanstalk/logs/260704_170320/i-06c19b05b7f450eca/var/log
+2026-07-04 17:14:54,415 (INFO) eb :   -skipping: ./.elasticbeanstalk/logs/260704_170320/i-06c19b05b7f450eca/var/log/healthd
+2026-07-04 17:14:54,415 (INFO) eb :   -skipping: ./.elasticbeanstalk/logs/260704_170320/i-06c19b05b7f450eca/var/log/nginx
+2026-07-04 17:14:54,415 (INFO) eb :   -skipping: ./.elasticbeanstalk/logs/260704_170320/i-06c19b05b7f450eca/var/log/nginx/healthd
+2026-07-04 17:14:54,415 (INFO) eb :   -skipping: ./.elasticbeanstalk/logs/260704_163802
+2026-07-04 17:14:54,415 (INFO) eb :   -skipping: ./.elasticbeanstalk/logs/260704_163802/i-082b8d87d1b99f816
+2026-07-04 17:14:54,415 (INFO) eb :   -skipping: ./.elasticbeanstalk/logs/260704_163802/i-082b8d87d1b99f816/var
+2026-07-04 17:14:54,415 (INFO) eb :   -skipping: ./.elasticbeanstalk/logs/260704_163802/i-082b8d87d1b99f816/var/log
+2026-07-04 17:14:54,415 (INFO) eb :   -skipping: ./.elasticbeanstalk/logs/260704_163802/i-082b8d87d1b99f816/var/log/healthd
+2026-07-04 17:14:54,415 (INFO) eb :   -skipping: ./.elasticbeanstalk/logs/260704_163802/i-082b8d87d1b99f816/var/log/nginx
+2026-07-04 17:14:54,415 (INFO) eb :   -skipping: ./.elasticbeanstalk/logs/260704_163802/i-082b8d87d1b99f816/var/log/nginx/healthd
+2026-07-04 17:14:54,416 (INFO) eb :  +adding: ./.mvn/wrapper/
+2026-07-04 17:14:54,416 (INFO) eb :   +adding: ./.mvn/wrapper/maven-wrapper.properties
+2026-07-04 17:14:54,416 (INFO) eb :   -skipping: ./.idea/encodings.xml
+2026-07-04 17:14:54,416 (INFO) eb :   -skipping: ./.idea/jarRepositories.xml
+2026-07-04 17:14:54,416 (INFO) eb :   -skipping: ./.idea/vcs.xml
+2026-07-04 17:14:54,416 (INFO) eb :   -skipping: ./.idea/.gitignore
+2026-07-04 17:14:54,416 (INFO) eb :   -skipping: ./.idea/workspace.xml
+2026-07-04 17:14:54,416 (INFO) eb :   -skipping: ./.idea/misc.xml
+2026-07-04 17:14:54,416 (INFO) eb :   -skipping: ./.idea/compiler.xml
+2026-07-04 17:14:54,417 (INFO) eb :  +adding: ./src/test/java/com/coffeetrace/coffee_trace_backend/
+2026-07-04 17:14:54,417 (INFO) eb :   +adding: ./src/test/java/com/coffeetrace/coffee_trace_backend/CoffeeTraceBackendApplicationTests.java
+2026-07-04 17:14:54,418 (INFO) eb :   +adding: ./src/test/java/com/coffeetrace/coffee_trace_backend/FarmAndFarmerTests.java
+2026-07-04 17:14:54,419 (INFO) eb :  +adding: ./src/main/resources/
+2026-07-04 17:14:54,419 (INFO) eb :   +adding: ./src/main/resources/appcommand
+2026-07-04 17:14:54,420 (INFO) eb :   +adding: ./src/main/resources/application.properties
+2026-07-04 17:14:54,421 (INFO) eb :  +adding: ./src/main/resources/static/
+2026-07-04 17:14:54,421 (INFO) eb :   +adding: ./src/main/resources/static/qr.html
+2026-07-04 17:14:54,421 (INFO) eb :  +adding: ./src/main/resources/db/migration/
+2026-07-04 17:14:54,421 (INFO) eb :   +adding: ./src/main/resources/db/migration/V1__init_schema_mysql.sql
+2026-07-04 17:14:54,422 (INFO) eb :  +adding: ./src/main/java/com/coffeetrace/
+2026-07-04 17:14:54,422 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/postman_collection.json
+2026-07-04 17:14:54,423 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/CoffeeTraceApplication.java
+2026-07-04 17:14:54,424 (INFO) eb :  +adding: ./src/main/java/com/coffeetrace/importside/
+2026-07-04 17:14:54,424 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/importside/ImportRoastService.java
+2026-07-04 17:14:54,424 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/importside/ImportProductRepository.java
+2026-07-04 17:14:54,425 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/importside/ImportRoastController.java
+2026-07-04 17:14:54,426 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/importside/ImportProduct.java
+2026-07-04 17:14:54,426 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/importside/ImportRoastBatchRepository.java
+2026-07-04 17:14:54,427 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/importside/ImportRoastBatch.java
+2026-07-04 17:14:54,428 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/importside/ImportDTOs.java
+2026-07-04 17:14:54,428 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/importside/RoastBatchRepository.java
+2026-07-04 17:14:54,429 (INFO) eb :  +adding: ./src/main/java/com/coffeetrace/trace/
+2026-07-04 17:14:54,429 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/trace/ProcessingStepView.java
+2026-07-04 17:14:54,430 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/trace/TraceabilityService.java
+2026-07-04 17:14:54,431 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/trace/FarmView.java
+2026-07-04 17:14:54,431 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/trace/TraceController.java
+2026-07-04 17:14:54,432 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/trace/FarmerContributionDto.java
+2026-07-04 17:14:54,433 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/trace/ExportTraceDto.java
+2026-07-04 17:14:54,434 (INFO) eb :  +adding: ./src/main/java/com/coffeetrace/config/
+2026-07-04 17:14:54,434 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/config/SecurityConfig.java
+2026-07-04 17:14:54,435 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/config/DataInitializer.java
+2026-07-04 17:14:54,435 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/config/SecurityBeans.java
+2026-07-04 17:14:54,436 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/config/JwtAuthFilter.java
+2026-07-04 17:14:54,437 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/config/GlobalExceptionHandler.java
+2026-07-04 17:14:54,438 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/config/UserDetailsServiceImpl.java
+2026-07-04 17:14:54,439 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/config/CorsConfig.java
+2026-07-04 17:14:54,440 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/config/TraceabilitySeeder.java
+2026-07-04 17:14:54,441 (INFO) eb :  +adding: ./src/main/java/com/coffeetrace/auth/
+2026-07-04 17:14:54,441 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/auth/UserRole.java
+2026-07-04 17:14:54,441 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/auth/postman_collection.json
+2026-07-04 17:14:54,442 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/auth/JwtService.java
+2026-07-04 17:14:54,443 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/auth/AppUser.java
+2026-07-04 17:14:54,444 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/auth/postman_collection2.json
+2026-07-04 17:14:54,445 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/auth/AuthController.java
+2026-07-04 17:14:54,446 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/auth/AuthService.java
+2026-07-04 17:14:54,447 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/auth/UserRepository.java
+2026-07-04 17:14:54,447 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/auth/Role.java
+2026-07-04 17:14:54,448 (INFO) eb :  +adding: ./src/main/java/com/coffeetrace/auth/dto/
+2026-07-04 17:14:54,448 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/auth/dto/RegisterRequest.java
+2026-07-04 17:14:54,449 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/auth/dto/AuthResponse.java
+2026-07-04 17:14:54,449 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/auth/dto/AuthRequest.java
+2026-07-04 17:14:54,450 (INFO) eb :  +adding: ./src/main/java/com/coffeetrace/processing/
+2026-07-04 17:14:54,451 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/processing/BatchController.java
+2026-07-04 17:14:54,451 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/processing/BatchWorkflowService.java
+2026-07-04 17:14:54,453 (INFO) eb :  +adding: ./src/main/java/com/coffeetrace/processing/dto/
+2026-07-04 17:14:54,453 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/processing/dto/BatchView.java
+2026-07-04 17:14:54,454 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/processing/dto/DryMillBatchCreateRequest.java
+2026-07-04 17:14:54,454 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/processing/dto/ExportLotCreateRequest.java
+2026-07-04 17:14:54,455 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/processing/dto/GreenLotCreateRequest.java
+2026-07-04 17:14:54,456 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/processing/dto/BatchMapper.java
+2026-07-04 17:14:54,457 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/processing/dto/BatchCreateRequest.java
+2026-07-04 17:14:54,457 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/processing/dto/ShipmentCreateRequest.java
+2026-07-04 17:14:54,458 (INFO) eb :  +adding: ./src/main/java/com/coffeetrace/qr/
+2026-07-04 17:14:54,458 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/qr/QrCode.java
+2026-07-04 17:14:54,459 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/qr/QrCodeRepository.java
+2026-07-04 17:14:54,460 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/qr/QrTraceService.java
+2026-07-04 17:14:54,460 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/qr/QrGenerator.java
+2026-07-04 17:14:54,461 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/qr/PublicQrController.java
+2026-07-04 17:14:54,462 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/qr/QrConfig.java
+2026-07-04 17:14:54,462 (INFO) eb :  +adding: ./src/main/java/com/coffeetrace/farms/
+2026-07-04 17:14:54,462 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/farms/FarmMapper.java
+2026-07-04 17:14:54,463 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/farms/Farm.java
+2026-07-04 17:14:54,463 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/farms/FarmRequest.java
+2026-07-04 17:14:54,464 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/farms/FarmService.java
+2026-07-04 17:14:54,465 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/farms/FarmRepository.java
+2026-07-04 17:14:54,466 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/farms/FarmController.java
+2026-07-04 17:14:54,467 (INFO) eb :  +adding: ./src/main/java/com/coffeetrace/supplychain/
+2026-07-04 17:14:54,467 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/supplychain/FarmerDeliveryRepository.java
+2026-07-04 17:14:54,468 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/supplychain/GreenLotRepository.java
+2026-07-04 17:14:54,469 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/supplychain/Shipment.java
+2026-07-04 17:14:54,469 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/supplychain/GreenLotController.java
+2026-07-04 17:14:54,470 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/supplychain/FarmerDeliveryController.java
+2026-07-04 17:14:54,471 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/supplychain/ProcessingBatchController.java
+2026-07-04 17:14:54,471 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/supplychain/ExportLotController.java
+2026-07-04 17:14:54,471 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/supplychain/ExportLotRepository.java
+2026-07-04 17:14:54,472 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/supplychain/DeliveryRequest.java
+2026-07-04 17:14:54,472 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/supplychain/ShipmentRepository.java
+2026-07-04 17:14:54,473 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/supplychain/ShipmentController.java
+2026-07-04 17:14:54,473 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/supplychain/GreenLot.java
+2026-07-04 17:14:54,474 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/supplychain/SupplyChainService.java
+2026-07-04 17:14:54,475 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/supplychain/DryMillBatchController.java
+2026-07-04 17:14:54,475 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/supplychain/DryMillBatchRepository.java
+2026-07-04 17:14:54,476 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/supplychain/ExportLot.java
+2026-07-04 17:14:54,477 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/supplychain/DryMillBatch.java
+2026-07-04 17:14:54,478 (INFO) eb :  +adding: ./src/main/java/com/coffeetrace/dashboard/
+2026-07-04 17:14:54,478 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/dashboard/DashboardStats.java
+2026-07-04 17:14:54,479 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/dashboard/DashboardController.java
+2026-07-04 17:14:54,480 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/dashboard/DashboardService.java
+2026-07-04 17:14:54,481 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/dashboard/DashboardStatsResponse.java
+2026-07-04 17:14:54,482 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/dashboard/ActivityLog.java
+2026-07-04 17:14:54,483 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/dashboard/ActivityController.java
+2026-07-04 17:14:54,485 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/dashboard/ActivityService.java
+2026-07-04 17:14:54,485 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/dashboard/ActivityRepository.java
+2026-07-04 17:14:54,486 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/dashboard/DashboardStatsController.java
+2026-07-04 17:14:54,487 (INFO) eb :  +adding: ./src/main/java/com/coffeetrace/batch/
+2026-07-04 17:14:54,487 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/batch/Batch.java
+2026-07-04 17:14:54,488 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/batch/BatchRepository.java
+2026-07-04 17:14:54,489 (INFO) eb :  +adding: ./src/main/java/com/coffeetrace/lot/
+2026-07-04 17:14:54,489 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/lot/LotRepository.java
+2026-07-04 17:14:54,490 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/lot/Lot.java
+2026-07-04 17:14:54,490 (INFO) eb :  +adding: ./src/main/java/com/coffeetrace/users/
+2026-07-04 17:14:54,491 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/users/ActorType.java
+2026-07-04 17:14:54,491 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/users/ActorController.java
+2026-07-04 17:14:54,492 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/users/ActorRepository.java
+2026-07-04 17:14:54,493 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/users/Actor.java
+2026-07-04 17:14:54,494 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/users/ActorService.java
+2026-07-04 17:14:54,495 (INFO) eb :  +adding: ./src/main/java/com/coffeetrace/station/
+2026-07-04 17:14:54,495 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/station/StationService.java
+2026-07-04 17:14:54,496 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/station/Station.java
+2026-07-04 17:14:54,496 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/station/StationCreateRequest.java
+2026-07-04 17:14:54,497 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/station/StationRepository.java
+2026-07-04 17:14:54,498 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/station/StationController.java
+2026-07-04 17:14:54,499 (INFO) eb :  +adding: ./src/main/java/com/coffeetrace/exporter/
+2026-07-04 17:14:54,499 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/exporter/QrExportResponse.java
+2026-07-04 17:14:54,499 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/exporter/CreateShipmentRequest.java
+2026-07-04 17:14:54,500 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/exporter/CreateExportLotRequest.java
+2026-07-04 17:14:54,501 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/exporter/ExporterController.java
+2026-07-04 17:14:54,501 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/exporter/ExporterService.java
+2026-07-04 17:14:54,502 (INFO) eb :  +adding: ./src/main/java/com/coffeetrace/publicapi/
+2026-07-04 17:14:54,503 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/publicapi/PublicTraceResponse.java
+2026-07-04 17:14:54,503 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/publicapi/PublicTraceController.java
+2026-07-04 17:14:54,504 (INFO) eb :  +adding: ./src/main/java/com/coffeetrace/actor/
+2026-07-04 17:14:54,505 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/actor/FarmerController.java
+2026-07-04 17:14:54,505 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/actor/FarmerRepository.java
+2026-07-04 17:14:54,506 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/actor/FarmerService.java
+2026-07-04 17:14:54,507 (INFO) eb :  +adding: ./src/main/java/com/coffeetrace/deliveries/
+2026-07-04 17:14:54,507 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/deliveries/FarmerDeliveryRepository.java
+2026-07-04 17:14:54,509 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/deliveries/DeliveryController.java
+2026-07-04 17:14:54,510 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/deliveries/FarmerDelivery.java
+2026-07-04 17:14:54,510 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/deliveries/DeliveryService.java
+2026-07-04 17:14:54,511 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/deliveries/FarmerDeliveryView.java
+2026-07-04 17:14:54,512 (INFO) eb :  +adding: ./src/main/java/com/coffeetrace/deliveries/dto/
+2026-07-04 17:14:54,512 (INFO) eb :   +adding: ./src/main/java/com/coffeetrace/deliveries/dto/DeliveryRequest.java
+2026-07-04 17:14:54,516 (DEBUG) ebcli.core.fileoperations : File size: 48376507
+2026-07-04 17:14:54,516 (DEBUG) ebcli.lib.elasticbeanstalk : Inside get_storage_location api wrapper
+2026-07-04 17:14:54,516 (DEBUG) ebcli.lib.aws : Making api call: (elasticbeanstalk, create_storage_location) to region: us-east-2 with args:{}
+2026-07-04 17:14:54,629 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:14:54,630 (DEBUG) ebcli.lib.aws : Response: {'S3Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'ResponseMetadata': {'RequestId': '4a3b9ea0-008a-47b7-902c-ce9ab694394c', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:54 GMT', 'RetryAttempts': 0}}
+2026-07-04 17:14:54,630 (DEBUG) ebcli.lib.aws : Creating new Botocore Client for s3
+2026-07-04 17:14:54,681 (DEBUG) ebcli.lib.aws : Successfully created session for s3
+2026-07-04 17:14:54,681 (DEBUG) ebcli.lib.aws : Making api call: (s3, list_objects) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Prefix': 'BunaTrace/app-260704_171452119043.zip'}
+2026-07-04 17:14:54,963 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:14:54,963 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': 'ZSVEM9HV2TBXSFYY', 'HostId': 'AidG9QBMvfnmY1xXK9TluKEIWHhdb3dUuaG2U7BQnpf205Hosx3vzEI2dg+78a6wYKqmLzw2BUQecVeIECIDEAcFCDo3v45R', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:55 GMT', 'RetryAttempts': 0}, 'IsTruncated': False, 'Marker': '', 'Name': 'elasticbeanstalk-us-east-2-479279107694', 'Prefix': 'BunaTrace/app-260704_171452119043.zip', 'MaxKeys': 1000, 'EncodingType': 'url'}
+2026-07-04 17:14:54,963 (INFO) eb : Uploading archive to s3 location: BunaTrace/app-260704_171452119043.zip
+2026-07-04 17:14:54,964 (DEBUG) ebcli.core.fileoperations : Project root found at: /Users/ephrembinchebo/Desktop/Projects/BunaTrace/coffee-trace-backend
+2026-07-04 17:14:54,964 (DEBUG) ebcli.lib.s3 : Upload Application Version. File size = 48376507
+2026-07-04 17:14:54,964 (DEBUG) ebcli.lib.s3 : Doing multi-threaded upload. Parts Needed=10
+2026-07-04 17:14:54,964 (DEBUG) ebcli.lib.aws : Making api call: (s3, list_multipart_uploads) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Prefix': 'BunaTrace/app-260704_171452119043.zip'}
+2026-07-04 17:14:55,045 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:14:55,045 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': 'XR9MB69DV49JGK95', 'HostId': 'pOdsKCttqoVFj2d/eQMwlme4uYI+Klz8N8amRZPfAE2zm7W8vLjYhDbQWHeBH7BLrYBv16spXa2d1xpiPVgebdhMfH0acN9C', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:56 GMT', 'RetryAttempts': 0}, 'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'KeyMarker': '', 'UploadIdMarker': '', 'NextKeyMarker': '', 'Prefix': 'BunaTrace/app-260704_171452119043.zip', 'NextUploadIdMarker': '', 'MaxUploads': 1000, 'IsTruncated': False}
+2026-07-04 17:14:55,045 (DEBUG) ebcli.lib.aws : Making api call: (s3, create_multipart_upload) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip'}
+2026-07-04 17:14:55,135 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:14:55,136 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': 'XR9H7S53GNV1X22E', 'HostId': 'NsttWku1n74/xxTQ0AI1lshvXdVOen4RjJJjPutKWWtSMAV2UkV1fTmqW+UitlN59rkIKVB28bKj+Lr3UuRKNhw/B0xONvIo', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:56 GMT', 'RetryAttempts': 0}, 'ServerSideEncryption': 'AES256', 'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0'}
+Creating application version archive "app-260704_171452119043".
+Uploading: [--------------------------------------------------] 0% 2026-07-04 17:14:55,136 (DEBUG) ebcli.lib.s3 : Creating child thread
+2026-07-04 17:14:55,136 (DEBUG) ebcli.lib.s3 : Creating child thread
+2026-07-04 17:14:55,137 (DEBUG) ebcli.lib.s3 : Creating child thread
+2026-07-04 17:14:55,137 (DEBUG) ebcli.lib.s3 : Creating child thread
+2026-07-04 17:14:55,138 (DEBUG) ebcli.lib.s3 : Creating child thread
+2026-07-04 17:14:55,138 (DEBUG) ebcli.lib.s3 : Creating child thread
+2026-07-04 17:14:55,139 (DEBUG) ebcli.lib.s3 : Creating child thread
+2026-07-04 17:14:55,139 (DEBUG) ebcli.lib.s3 : Creating child thread
+2026-07-04 17:14:55,141 (DEBUG) ebcli.lib.aws : Making api call: (s3, list_parts) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0'}
+2026-07-04 17:14:55,147 (DEBUG) ebcli.lib.aws : Making api call: (s3, list_parts) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0'}
+2026-07-04 17:14:55,152 (DEBUG) ebcli.lib.aws : Making api call: (s3, list_parts) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0'}
+2026-07-04 17:14:55,157 (DEBUG) ebcli.lib.aws : Making api call: (s3, list_parts) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0'}
+2026-07-04 17:14:55,164 (DEBUG) ebcli.lib.aws : Making api call: (s3, list_parts) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0'}
+2026-07-04 17:14:55,168 (DEBUG) ebcli.lib.aws : Making api call: (s3, list_parts) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0'}
+2026-07-04 17:14:55,175 (DEBUG) ebcli.lib.aws : Making api call: (s3, list_parts) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0'}
+2026-07-04 17:14:55,179 (DEBUG) ebcli.lib.aws : Making api call: (s3, list_parts) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0'}
+2026-07-04 17:14:55,232 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:14:55,233 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': 'XR9VHXF1VN6Z93R9', 'HostId': 'awCBB4G9gNmt2UPcAm/J1PAoZ51jM06bMJ8RbH167UG9jcZF+D21FfA1WxwI0aRLvMXngQKobPZNVkuaX+P9KZjzAV52ssJY', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:56 GMT', 'RetryAttempts': 0}, 'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0', 'PartNumberMarker': 0, 'NextPartNumberMarker': 0, 'MaxParts': 1000, 'IsTruncated': False, 'Initiator': {'ID': 'arn:aws:iam::479279107694:user/bunatrace-admin', 'DisplayName': 'bunatrace-admin'}, 'Owner': {'ID': '89faa0705bdb3c02843f3a6be38116cff90f7b528ede41b2f59e33681941d8ca'}, 'StorageClass': 'STANDARD'}
+2026-07-04 17:14:55,242 (DEBUG) ebcli.lib.aws : Making api call: (s3, upload_part) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0', 'Body': <_io.BytesIO object at 0x33fc2aed0>, 'PartNumber': 1}
+2026-07-04 17:14:55,628 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:14:55,629 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': 'XR9MMY7J6MR6TQWN', 'HostId': 'x51aUPB7q5h53skawllwW9m1f6ITMaZRUNoMSj75263yaHG+3v/+FRs2i7O/kY+0LZtGNnsg6y4Ti4O9Z9Pu7S0yaMZeoZCR', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:56 GMT', 'RetryAttempts': 0}, 'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0', 'PartNumberMarker': 0, 'NextPartNumberMarker': 0, 'MaxParts': 1000, 'IsTruncated': False, 'Initiator': {'ID': 'arn:aws:iam::479279107694:user/bunatrace-admin', 'DisplayName': 'bunatrace-admin'}, 'Owner': {'ID': '89faa0705bdb3c02843f3a6be38116cff90f7b528ede41b2f59e33681941d8ca'}, 'StorageClass': 'STANDARD'}
+2026-07-04 17:14:55,629 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:14:55,633 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:14:55,644 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:14:55,644 (DEBUG) ebcli.lib.aws : Making api call: (s3, upload_part) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0', 'Body': <_io.BytesIO object at 0x33fc2b7e0>, 'PartNumber': 4}
+2026-07-04 17:14:55,646 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:14:55,647 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:14:55,647 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': 'XR9MWZ2AW4X5E6XC', 'HostId': 'UWfAGu+9XZpb96PAZ46qolZyuj390DUGSZD/RVS7E9YtyxG+E062jcKkiiA+wScqIeefvySXAT/kMgcl/U4vqNv5dcIow88K', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:56 GMT', 'RetryAttempts': 0}, 'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0', 'PartNumberMarker': 0, 'NextPartNumberMarker': 0, 'MaxParts': 1000, 'IsTruncated': False, 'Initiator': {'ID': 'arn:aws:iam::479279107694:user/bunatrace-admin', 'DisplayName': 'bunatrace-admin'}, 'Owner': {'ID': '89faa0705bdb3c02843f3a6be38116cff90f7b528ede41b2f59e33681941d8ca'}, 'StorageClass': 'STANDARD'}
+2026-07-04 17:14:55,648 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:14:55,648 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': 'XR9Y8JDQVQQJ8HY7', 'HostId': 'jab8Zibq77Ara/X8xNT3ZwCNZcHVq3bmBhZhsM4q2GzT3IFnDatqN7n6vC1d81wBFH95apnb6kLp3K2IoV3dG9UCdnT0hLf5', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:56 GMT', 'RetryAttempts': 0}, 'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0', 'PartNumberMarker': 0, 'NextPartNumberMarker': 0, 'MaxParts': 1000, 'IsTruncated': False, 'Initiator': {'ID': 'arn:aws:iam::479279107694:user/bunatrace-admin', 'DisplayName': 'bunatrace-admin'}, 'Owner': {'ID': '89faa0705bdb3c02843f3a6be38116cff90f7b528ede41b2f59e33681941d8ca'}, 'StorageClass': 'STANDARD'}
+2026-07-04 17:14:55,649 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': 'XR9W5RZ9QTY3269C', 'HostId': 'Ip4EH9H34W1WETilegmS5PFLq5ibiFhRRkC+83wi/V5RQIw4sFDltp2TVcDM8h2rLU/OfBEStp8KGa8w3B1w/riZgAyaLPLe', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:56 GMT', 'RetryAttempts': 0}, 'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0', 'PartNumberMarker': 0, 'NextPartNumberMarker': 0, 'MaxParts': 1000, 'IsTruncated': False, 'Initiator': {'ID': 'arn:aws:iam::479279107694:user/bunatrace-admin', 'DisplayName': 'bunatrace-admin'}, 'Owner': {'ID': '89faa0705bdb3c02843f3a6be38116cff90f7b528ede41b2f59e33681941d8ca'}, 'StorageClass': 'STANDARD'}
+2026-07-04 17:14:55,652 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': 'XR9PVVBXCWTN0NT9', 'HostId': 'NIXlEx2Mlw6c8KfNHI4G16FIdWkY5ZKB1rdbpePuKwhlNhQ8LNtk3DI9gje4vBLRBn4TL9sU8qSvlTJHktV48fmGMJfrs2Ox', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:56 GMT', 'RetryAttempts': 0}, 'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0', 'PartNumberMarker': 0, 'NextPartNumberMarker': 0, 'MaxParts': 1000, 'IsTruncated': False, 'Initiator': {'ID': 'arn:aws:iam::479279107694:user/bunatrace-admin', 'DisplayName': 'bunatrace-admin'}, 'Owner': {'ID': '89faa0705bdb3c02843f3a6be38116cff90f7b528ede41b2f59e33681941d8ca'}, 'StorageClass': 'STANDARD'}
+2026-07-04 17:14:55,652 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': 'XR9PQW35BFRQVGBB', 'HostId': 'sXLbyniSs4hRM8NPJZTk4eGF2VrV66WX2OITqsVLqMkm8fjTaxzM4u6whWiu9z+Zd6JZ7mdyPSjMDCK2Kkbzy4Uv+CJU4MAA', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:56 GMT', 'RetryAttempts': 0}, 'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0', 'PartNumberMarker': 0, 'NextPartNumberMarker': 0, 'MaxParts': 1000, 'IsTruncated': False, 'Initiator': {'ID': 'arn:aws:iam::479279107694:user/bunatrace-admin', 'DisplayName': 'bunatrace-admin'}, 'Owner': {'ID': '89faa0705bdb3c02843f3a6be38116cff90f7b528ede41b2f59e33681941d8ca'}, 'StorageClass': 'STANDARD'}
+2026-07-04 17:14:55,661 (DEBUG) ebcli.lib.aws : Making api call: (s3, upload_part) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0', 'Body': <_io.BytesIO object at 0x33fc29b70>, 'PartNumber': 2}
+2026-07-04 17:14:55,661 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': 'XR9KW2079F0GFPHC', 'HostId': 'ZKKkjR57JINsfCJ9Qf6tcNZrJh16TgDk8udYNoZ6LtrZwqyaH9qVBjlJIohGbYWOK5KUSWsaFKwqyu1bTDGizja33eJ7fNIm', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:56 GMT', 'RetryAttempts': 0}, 'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0', 'PartNumberMarker': 0, 'NextPartNumberMarker': 0, 'MaxParts': 1000, 'IsTruncated': False, 'Initiator': {'ID': 'arn:aws:iam::479279107694:user/bunatrace-admin', 'DisplayName': 'bunatrace-admin'}, 'Owner': {'ID': '89faa0705bdb3c02843f3a6be38116cff90f7b528ede41b2f59e33681941d8ca'}, 'StorageClass': 'STANDARD'}
+2026-07-04 17:14:55,667 (DEBUG) ebcli.lib.aws : Making api call: (s3, upload_part) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0', 'Body': <_io.BytesIO object at 0x33fc29580>, 'PartNumber': 5}
+2026-07-04 17:14:55,672 (DEBUG) ebcli.lib.aws : Making api call: (s3, upload_part) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0', 'Body': <_io.BytesIO object at 0x33fc29d50>, 'PartNumber': 7}
+2026-07-04 17:14:55,678 (DEBUG) ebcli.lib.aws : Making api call: (s3, upload_part) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0', 'Body': <_io.BytesIO object at 0x33fc2a340>, 'PartNumber': 6}
+2026-07-04 17:14:55,683 (DEBUG) ebcli.lib.aws : Making api call: (s3, upload_part) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0', 'Body': <_io.BytesIO object at 0x33fc2a070>, 'PartNumber': 8}
+2026-07-04 17:14:55,694 (DEBUG) ebcli.lib.aws : Making api call: (s3, upload_part) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0', 'Body': <_io.BytesIO object at 0x33fc2a5c0>, 'PartNumber': 3}
+2026-07-04 17:15:01,987 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:15:01,987 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': 'XR9ZBEYCAMQZQQNS', 'HostId': 'JxWe7mEq8U730KNnJgY9720PfOdLUJ3qDjiGjrEo6Kd1MWSgCU63UMMkYThfXxpoF5IiJPaMPAXCHelk29bClT4Jw3P/ekQu', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:56 GMT', 'RetryAttempts': 0}, 'ServerSideEncryption': 'AES256', 'ETag': '"88fbe9181d7cca4315d5ddba6bae3778"', 'ChecksumCRC32': 'b/IHeQ=='}
+Uploading: [#####---------------------------------------------] 10% 2026-07-04 17:15:01,997 (DEBUG) ebcli.lib.aws : Making api call: (s3, list_parts) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0'}
+2026-07-04 17:15:02,096 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:15:02,096 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': 'D9AD8K4YJF6GZKAR', 'HostId': 'od156IWCDTp8nu6LkWfwQUdlXy9F0KiiQbsY81Nmq3XSoUY/RGk9sbumZJWyqcxnjhAfFvDTy9NlxWU1m1ueOCqsR+xeALW4', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:15:03 GMT', 'RetryAttempts': 0}, 'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0', 'PartNumberMarker': 0, 'NextPartNumberMarker': 1, 'MaxParts': 1000, 'IsTruncated': False, 'Parts': [{'PartNumber': 1, 'LastModified': datetime.datetime(2026, 7, 5, 0, 14, 56, tzinfo=tzutc()), 'ETag': '"88fbe9181d7cca4315d5ddba6bae3778"', 'Size': 5252880}], 'Initiator': {'ID': 'arn:aws:iam::479279107694:user/bunatrace-admin', 'DisplayName': 'bunatrace-admin'}, 'Owner': {'ID': '89faa0705bdb3c02843f3a6be38116cff90f7b528ede41b2f59e33681941d8ca'}, 'StorageClass': 'STANDARD'}
+2026-07-04 17:15:02,097 (DEBUG) ebcli.lib.aws : Making api call: (s3, upload_part) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0', 'Body': <_io.BytesIO object at 0x33fc2ae80>, 'PartNumber': 9}
+2026-07-04 17:15:03,637 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:15:03,637 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': 'XR9Y1CH45JF22JTG', 'HostId': '/DCeMPHqzyT72oHzzhHi6BMFzXdmxdEHlHkBn7iugDlAB3dnOXG8Dn9C3CDkhgllpyWgDc48BiX6iVggZKVPPdP+13BW/N/J', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:56 GMT', 'RetryAttempts': 0}, 'ServerSideEncryption': 'AES256', 'ETag': '"0082ff2fe678345367187ad7aedfa9fe"', 'ChecksumCRC32': '1yoYcw=='}
+Uploading: [##########----------------------------------------] 20% 2026-07-04 17:15:03,638 (DEBUG) ebcli.lib.aws : Making api call: (s3, list_parts) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0'}
+2026-07-04 17:15:03,758 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:15:03,758 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': '8V84WF89B5YGYCRP', 'HostId': 'EFh7YTaoqzlS7tYeRnPZ83XqYQGYf7JBmAzc8kOQ5nwTbKOpM1QDYn9NXfqgANiyHq8/GB3bdyfNtOKjTGx7WJDz5hKvGprZ', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:15:04 GMT', 'RetryAttempts': 0}, 'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0', 'PartNumberMarker': 0, 'NextPartNumberMarker': 7, 'MaxParts': 1000, 'IsTruncated': False, 'Parts': [{'PartNumber': 1, 'LastModified': datetime.datetime(2026, 7, 5, 0, 14, 56, tzinfo=tzutc()), 'ETag': '"88fbe9181d7cca4315d5ddba6bae3778"', 'Size': 5252880}, {'PartNumber': 7, 'LastModified': datetime.datetime(2026, 7, 5, 0, 14, 56, tzinfo=tzutc()), 'ETag': '"0082ff2fe678345367187ad7aedfa9fe"', 'Size': 5252880}], 'Initiator': {'ID': 'arn:aws:iam::479279107694:user/bunatrace-admin', 'DisplayName': 'bunatrace-admin'}, 'Owner': {'ID': '89faa0705bdb3c02843f3a6be38116cff90f7b528ede41b2f59e33681941d8ca'}, 'StorageClass': 'STANDARD'}
+2026-07-04 17:15:03,759 (DEBUG) ebcli.lib.aws : Making api call: (s3, upload_part) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0', 'Body': <_io.BytesIO object at 0x33f670040>, 'PartNumber': 10}
+2026-07-04 17:15:04,508 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:15:04,509 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': 'XR9WE9AQPCEH26H1', 'HostId': 'ZFx3uBsH94xod8DQbr+pjl9s4wT5siQ1SlVyiRoe/qknxvveuLr+FOIs+sK+QnhyCSRC+ppZfG00pAELoXdG4fgM+06JZm9/', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:56 GMT', 'RetryAttempts': 0}, 'ServerSideEncryption': 'AES256', 'ETag': '"bc06f4c12c581f7434d85b0e3fa62653"', 'ChecksumCRC32': 'M3GzvA=='}
+Uploading: [###############-----------------------------------] 30% 2026-07-04 17:15:04,510 (DEBUG) ebcli.lib.s3 : No data left, closing
+2026-07-04 17:15:04,689 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:15:04,689 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': 'XR9X4BXPX5VDDJER', 'HostId': 'qSW3/0dfynxEMxVHkCDx/sqg2xnRn1W4JFJLn2g9qtJ1nL9YsNdeGNUohwCVyPDefWMEdYmzTygzaIM/CwjnocZ2WQO6VsD2', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:56 GMT', 'RetryAttempts': 0}, 'ServerSideEncryption': 'AES256', 'ETag': '"cab677251835c2b676ac15d9e8f6eecf"', 'ChecksumCRC32': 'vJYBKQ=='}
+Uploading: [####################------------------------------] 40% 2026-07-04 17:15:04,690 (DEBUG) ebcli.lib.s3 : No data left, closing
+2026-07-04 17:15:04,872 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:15:04,872 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': 'XR9KYG8V5X66JEHX', 'HostId': 'q7KheU+H7CrX54O4HVA4hJmELjvlq026VlDiZOMkHILu6svOcsBfI+jarHFmI++TZDxYFt6NfdMX56Wzg1vF4qwCIDVcQGo3', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:56 GMT', 'RetryAttempts': 0}, 'ServerSideEncryption': 'AES256', 'ETag': '"0cdbf66f5a7bf2727ae342d8e2befb05"', 'ChecksumCRC32': 'T/6qYQ=='}
+Uploading: [#########################-------------------------] 50% 2026-07-04 17:15:04,873 (DEBUG) ebcli.lib.s3 : No data left, closing
+2026-07-04 17:15:05,030 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:15:05,030 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': '8V89BWBK91204S1C', 'HostId': 'cePrliLgxdnYYxmThaE70CiD+1K+Ca+ONix5KgBt90gjTpGlFeXXCkOSc774plixqSywKWQay5tXT6UeS73kYw8kZi0cEzqb', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:15:04 GMT', 'RetryAttempts': 0}, 'ServerSideEncryption': 'AES256', 'ETag': '"de87d0e0779e7297f9ed08fc549370b8"', 'ChecksumCRC32': 'xGlEAA=='}
+Uploading: [##############################--------------------] 60% 2026-07-04 17:15:05,030 (DEBUG) ebcli.lib.s3 : No data left, closing
+2026-07-04 17:15:05,052 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:15:05,052 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': 'XR9GZXM2JSAV8DJR', 'HostId': '+t7QZ743zgUUyermCLHKEn604u4KbYsopMYU+dtG7M3RO7pmuP4KGb2Nc/n34YygxEBm3k4/z8doSXqoOCQzDt9DvFwLQ+ZV', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:56 GMT', 'RetryAttempts': 0}, 'ServerSideEncryption': 'AES256', 'ETag': '"1cdb17d6e2a4b13c67931140ce44ed99"', 'ChecksumCRC32': 'GAju+w=='}
+Uploading: [###################################---------------] 70% 2026-07-04 17:15:05,053 (DEBUG) ebcli.lib.s3 : No data left, closing
+2026-07-04 17:15:07,326 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:15:07,327 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': 'XR9SHTSJ2B6ZX9SP', 'HostId': 'BmMlqWeazg0+drMa/12SddtaFcD5113didWFiazZECpe10b3SkulzzdYNHTESXFVxwjnQ84l29S4vRr5YI+M20IRZsZRP/t/', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:56 GMT', 'RetryAttempts': 0}, 'ServerSideEncryption': 'AES256', 'ETag': '"7cd237e8a7716f17cc427b1cca91f773"', 'ChecksumCRC32': 'aiICzQ=='}
+Uploading: [########################################----------] 80% 2026-07-04 17:15:07,328 (DEBUG) ebcli.lib.s3 : No data left, closing
+2026-07-04 17:15:07,613 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:15:07,613 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': 'XR9QVGG8T5VMYR47', 'HostId': '884glxFo9jeybKIz4tDbCFimQkb9T2Ua/uvr3Lj4JY+eEW/3jqIlaMi13PCWOr+0gyQ5DD6WY//5arCa4EO2ebFdgQxoR2ML', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:14:56 GMT', 'RetryAttempts': 0}, 'ServerSideEncryption': 'AES256', 'ETag': '"5e88c79621cb93c4e4da8c9b6e33810e"', 'ChecksumCRC32': 'crVmEw=='}
+Uploading: [#############################################-----] 90% 2026-07-04 17:15:07,614 (DEBUG) ebcli.lib.s3 : No data left, closing
+2026-07-04 17:15:08,297 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:15:08,297 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': 'D9A0J54FH5VPPSN7', 'HostId': '/iQHn7COCg/EP8I4Lhy+zUXR1P2dzNo35Ttjc5N4SOrsNhiHFEG8VbPZrSJwPYrZdY1hjhn7LEia98rFvpJ73ZXeydbN124k', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:15:03 GMT', 'RetryAttempts': 0}, 'ServerSideEncryption': 'AES256', 'ETag': '"92d3156ed437b1c917066adc949f08d5"', 'ChecksumCRC32': 'ArPrsA=='}
+Uploading: [##################################################] 100% Done...
+2026-07-04 17:15:08,299 (DEBUG) ebcli.lib.s3 : No data left, closing
+2026-07-04 17:15:08,301 (DEBUG) ebcli.lib.aws : Making api call: (s3, complete_multipart_upload) to region: us-east-2 with args:{'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'UploadId': 'rNg_7YwtN82FZoQCyfX0DLQCr5bQn606kAtMxsAdJODRpblZnZJZFd06KQ5zGfTZgrXFTJfc4yk44aBLrEGqSygqJZ2ERhLUgaWuK3jG31tpWdaSuqNwPH6PbsuPEsW0', 'MultipartUpload': {'Parts': [{'PartNumber': 1, 'ETag': '"88fbe9181d7cca4315d5ddba6bae3778"'}, {'PartNumber': 2, 'ETag': '"bc06f4c12c581f7434d85b0e3fa62653"'}, {'PartNumber': 3, 'ETag': '"cab677251835c2b676ac15d9e8f6eecf"'}, {'PartNumber': 4, 'ETag': '"1cdb17d6e2a4b13c67931140ce44ed99"'}, {'PartNumber': 5, 'ETag': '"0cdbf66f5a7bf2727ae342d8e2befb05"'}, {'PartNumber': 6, 'ETag': '"7cd237e8a7716f17cc427b1cca91f773"'}, {'PartNumber': 7, 'ETag': '"0082ff2fe678345367187ad7aedfa9fe"'}, {'PartNumber': 8, 'ETag': '"5e88c79621cb93c4e4da8c9b6e33810e"'}, {'PartNumber': 9, 'ETag': '"92d3156ed437b1c917066adc949f08d5"'}, {'PartNumber': 10, 'ETag': '"de87d0e0779e7297f9ed08fc549370b8"'}]}}
+2026-07-04 17:15:08,478 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:15:08,478 (DEBUG) ebcli.lib.aws : Response: {'ResponseMetadata': {'RequestId': '60DQ9QNQMDT7CWV6', 'HostId': 'iOwiW2MaAomSm0i/f2lcWygGh4wk+VXC7HxHZsRH3BMivInvglbt9Tn14Yb8I/3rKvxFGe7YbvAq9evk9UYPNVQzm43bo8Mr', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:15:09 GMT', 'RetryAttempts': 0}, 'ServerSideEncryption': 'AES256', 'Location': 'https://elasticbeanstalk-us-east-2-479279107694.s3.us-east-2.amazonaws.com/BunaTrace%2Fapp-260704_171452119043.zip', 'Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'Key': 'BunaTrace/app-260704_171452119043.zip', 'ETag': '"3e50ecd0f321323cdb64a3ff013d13cf-10"', 'ChecksumCRC64NVME': 'uDt+M8SNE0E=', 'ChecksumType': 'FULL_OBJECT'}
+2026-07-04 17:15:08,478 (INFO) eb : Creating AppVersion app-260704_171452119043
+2026-07-04 17:15:08,478 (DEBUG) ebcli.lib.elasticbeanstalk : Inside create_application_version api wrapper
+2026-07-04 17:15:08,479 (DEBUG) ebcli.lib.aws : Making api call: (elasticbeanstalk, create_application_version) to region: us-east-2 with args:{'ApplicationName': 'BunaTrace', 'VersionLabel': 'app-260704_171452119043', 'Process': False, 'Description': 'EB-CLI deploy', 'SourceBundle': {'S3Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'S3Key': 'BunaTrace/app-260704_171452119043.zip'}}
+2026-07-04 17:15:08,827 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:15:08,827 (DEBUG) ebcli.lib.aws : Response: {'ApplicationVersion': {'ApplicationName': 'BunaTrace', 'Description': 'EB-CLI deploy', 'VersionLabel': 'app-260704_171452119043', 'SourceBundle': {'S3Bucket': 'elasticbeanstalk-us-east-2-479279107694', 'S3Key': 'BunaTrace/app-260704_171452119043.zip'}, 'DateCreated': datetime.datetime(2026, 7, 5, 0, 15, 8, 685000, tzinfo=tzutc()), 'DateUpdated': datetime.datetime(2026, 7, 5, 0, 15, 8, 686000, tzinfo=tzutc()), 'Status': 'UNPROCESSED'}, 'ResponseMetadata': {'RequestId': 'f7e3e2a6-631b-480d-87ac-d3eb71f8973c', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:15:08 GMT', 'RetryAttempts': 0}}
+2026-07-04 17:15:08,827 (DEBUG) ebcli.lib.elasticbeanstalk : Inside update_env_application_version api wrapper
+2026-07-04 17:15:08,827 (DEBUG) ebcli.lib.aws : Making api call: (elasticbeanstalk, update_environment) to region: us-east-2 with args:{'EnvironmentName': 'bunatrace-prod-v2', 'VersionLabel': 'app-260704_171452119043'}
+2026-07-04 17:15:09,544 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:15:09,545 (DEBUG) ebcli.lib.aws : Response: {'EnvironmentName': 'bunatrace-prod-v2', 'EnvironmentId': 'e-nzkjz6ij8h', 'ApplicationName': 'BunaTrace', 'VersionLabel': 'app-260704_171452119043', 'SolutionStackName': '64bit Amazon Linux 2023 v4.12.3 running Corretto 21', 'PlatformArn': 'arn:aws:elasticbeanstalk:us-east-2::platform/Corretto 21 running on 64bit Amazon Linux 2023/4.12.3', 'Description': 'Environment created from the EB CLI using "eb create"', 'EndpointURL': 'awseb--AWSEB-UfVj9nja9B9A-1075466191.us-east-2.elb.amazonaws.com', 'CNAME': 'bunatrace-prod-v2.eba-rfqt7cge.us-east-2.elasticbeanstalk.com', 'DateCreated': datetime.datetime(2026, 7, 4, 23, 54, 0, 161000, tzinfo=tzutc()), 'DateUpdated': datetime.datetime(2026, 7, 5, 0, 15, 9, 216000, tzinfo=tzutc()), 'Status': 'Updating', 'AbortableOperationInProgress': True, 'Health': 'Grey', 'Alerts': [], 'Tier': {'Name': 'WebServer', 'Type': 'Standard', 'Version': '1.0'}, 'EnvironmentArn': 'arn:aws:elasticbeanstalk:us-east-2:479279107694:environment/BunaTrace/bunatrace-prod-v2', 'ResponseMetadata': {'RequestId': 'bbab1525-1a80-4436-9bb4-ce6cbdebfc17', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:15:09 GMT', 'RetryAttempts': 0}}
+2026-07-04 17:15:09,545 (DEBUG) ebcli.lib.elasticbeanstalk : Inside get_new_events api wrapper
+2026-07-04 17:15:09,545 (DEBUG) ebcli.lib.aws : Making api call: (elasticbeanstalk, describe_events) to region: us-east-2 with args:{'EnvironmentName': 'bunatrace-prod-v2', 'RequestId': 'bbab1525-1a80-4436-9bb4-ce6cbdebfc17'}
+2026-07-04 17:15:09,854 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:15:09,854 (DEBUG) ebcli.lib.aws : Response: {'Events': [{'EventDate': datetime.datetime(2026, 7, 5, 0, 15, 9, 159000, tzinfo=tzutc()), 'Message': 'Environment update is starting.', 'ApplicationName': 'BunaTrace', 'EnvironmentName': 'bunatrace-prod-v2', 'RequestId': 'bbab1525-1a80-4436-9bb4-ce6cbdebfc17', 'Severity': 'INFO'}], 'ResponseMetadata': {'RequestId': 'da8445a0-b188-4d81-9d69-a0f444bf43e0', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:15:09 GMT', 'RetryAttempts': 0}}
+2026-07-04 17:15:14,859 (DEBUG) ebcli.lib.elasticbeanstalk : Inside get_new_events api wrapper
+2026-07-04 17:15:14,860 (DEBUG) ebcli.lib.aws : Making api call: (elasticbeanstalk, describe_events) to region: us-east-2 with args:{'ApplicationName': 'BunaTrace', 'EnvironmentName': 'bunatrace-prod-v2', 'RequestId': 'bbab1525-1a80-4436-9bb4-ce6cbdebfc17', 'StartTime': '2026-07-05 00:15:09.160000+00:00'}
+2026-07-04 17:15:14,976 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:15:14,976 (DEBUG) ebcli.lib.aws : Response: {'Events': [{'EventDate': datetime.datetime(2026, 7, 5, 0, 15, 14, 644000, tzinfo=tzutc()), 'Message': 'Deploying new version to instance(s).', 'ApplicationName': 'BunaTrace', 'EnvironmentName': 'bunatrace-prod-v2', 'RequestId': 'bbab1525-1a80-4436-9bb4-ce6cbdebfc17', 'Severity': 'INFO'}], 'ResponseMetadata': {'RequestId': '680ed902-da7d-43c3-8638-eb1eed6c63ba', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:15:14 GMT', 'RetryAttempts': 0}}
+2026-07-04 17:15:19,979 (DEBUG) ebcli.lib.elasticbeanstalk : Inside get_new_events api wrapper
+2026-07-04 17:15:19,980 (DEBUG) ebcli.lib.aws : Making api call: (elasticbeanstalk, describe_events) to region: us-east-2 with args:{'ApplicationName': 'BunaTrace', 'EnvironmentName': 'bunatrace-prod-v2', 'RequestId': 'bbab1525-1a80-4436-9bb4-ce6cbdebfc17', 'StartTime': '2026-07-05 00:15:14.645000+00:00'}
+2026-07-04 17:15:20,073 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:15:20,073 (DEBUG) ebcli.lib.aws : Response: {'Events': [], 'ResponseMetadata': {'RequestId': '0c40a826-84e3-4eca-9f62-6d648244107b', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:15:20 GMT', 'RetryAttempts': 0}}
+2026-07-04 17:15:25,079 (DEBUG) ebcli.lib.elasticbeanstalk : Inside get_new_events api wrapper
+2026-07-04 17:15:25,079 (DEBUG) ebcli.lib.aws : Making api call: (elasticbeanstalk, describe_events) to region: us-east-2 with args:{'ApplicationName': 'BunaTrace', 'EnvironmentName': 'bunatrace-prod-v2', 'RequestId': 'bbab1525-1a80-4436-9bb4-ce6cbdebfc17', 'StartTime': '2026-07-05 00:15:14.645000+00:00'}
+2026-07-04 17:15:25,420 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:15:25,421 (DEBUG) ebcli.lib.aws : Response: {'Events': [{'EventDate': datetime.datetime(2026, 7, 5, 0, 15, 25, 69000, tzinfo=tzutc()), 'Message': "Unsuccessful command execution on instance id(s) 'i-06c19b05b7f450eca'. Aborting the operation.", 'ApplicationName': 'BunaTrace', 'EnvironmentName': 'bunatrace-prod-v2', 'RequestId': 'bbab1525-1a80-4436-9bb4-ce6cbdebfc17', 'Severity': 'ERROR'}, {'EventDate': datetime.datetime(2026, 7, 5, 0, 15, 24, 979000, tzinfo=tzutc()), 'Message': 'Command execution completed on all instances. Summary: [Successful: 0, Failed: 1].', 'ApplicationName': 'BunaTrace', 'EnvironmentName': 'bunatrace-prod-v2', 'RequestId': 'bbab1525-1a80-4436-9bb4-ce6cbdebfc17', 'Severity': 'INFO'}, {'EventDate': datetime.datetime(2026, 7, 5, 0, 15, 24, 838000, tzinfo=tzutc()), 'Message': '[Instance: i-06c19b05b7f450eca] Command failed on instance. Return code: 1 Output: Engine execution has encountered an error..', 'ApplicationName': 'BunaTrace', 'EnvironmentName': 'bunatrace-prod-v2', 'RequestId': 'bbab1525-1a80-4436-9bb4-ce6cbdebfc17', 'Severity': 'ERROR'}, {'EventDate': datetime.datetime(2026, 7, 5, 0, 15, 22, 659000, tzinfo=tzutc()), 'Message': "Instance deployment failed. For details, see 'eb-engine.log'.", 'ApplicationName': 'BunaTrace', 'EnvironmentName': 'bunatrace-prod-v2', 'RequestId': 'bbab1525-1a80-4436-9bb4-ce6cbdebfc17', 'Severity': 'ERROR'}, {'EventDate': datetime.datetime(2026, 7, 5, 0, 15, 18, 62000, tzinfo=tzutc()), 'Message': "Instance deployment successfully generated a 'Procfile'.", 'ApplicationName': 'BunaTrace', 'EnvironmentName': 'bunatrace-prod-v2', 'RequestId': 'bbab1525-1a80-4436-9bb4-ce6cbdebfc17', 'Severity': 'INFO'}, {'EventDate': datetime.datetime(2026, 7, 5, 0, 15, 18, 57000, tzinfo=tzutc()), 'Message': 'Instance deployment successfully detected a JAR file in your source bundle.', 'ApplicationName': 'BunaTrace', 'EnvironmentName': 'bunatrace-prod-v2', 'RequestId': 'bbab1525-1a80-4436-9bb4-ce6cbdebfc17', 'Severity': 'INFO'}], 'ResponseMetadata': {'RequestId': 'b419f90d-a4b4-484b-b111-159d4e8739f1', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:15:25 GMT', 'RetryAttempts': 0}}
+2026-07-04 17:15:30,424 (DEBUG) ebcli.lib.elasticbeanstalk : Inside get_new_events api wrapper
+2026-07-04 17:15:30,424 (DEBUG) ebcli.lib.aws : Making api call: (elasticbeanstalk, describe_events) to region: us-east-2 with args:{'ApplicationName': 'BunaTrace', 'EnvironmentName': 'bunatrace-prod-v2', 'RequestId': 'bbab1525-1a80-4436-9bb4-ce6cbdebfc17', 'StartTime': '2026-07-05 00:15:25.070000+00:00'}
+2026-07-04 17:15:30,538 (DEBUG) ebcli.lib.aws : API call finished, status = 200
+2026-07-04 17:15:30,538 (DEBUG) ebcli.lib.aws : Response: {'Events': [{'EventDate': datetime.datetime(2026, 7, 5, 0, 15, 25, 332000, tzinfo=tzutc()), 'Message': 'During an aborted deployment, some instances may have deployed the new application version. To ensure all instances are running the same version, re-deploy the appropriate application version.', 'ApplicationName': 'BunaTrace', 'EnvironmentName': 'bunatrace-prod-v2', 'RequestId': 'bbab1525-1a80-4436-9bb4-ce6cbdebfc17', 'Severity': 'ERROR'}, {'EventDate': datetime.datetime(2026, 7, 5, 0, 15, 25, 275000, tzinfo=tzutc()), 'Message': 'Failed to deploy application.', 'ApplicationName': 'BunaTrace', 'EnvironmentName': 'bunatrace-prod-v2', 'RequestId': 'bbab1525-1a80-4436-9bb4-ce6cbdebfc17', 'Severity': 'ERROR'}], 'ResponseMetadata': {'RequestId': '9a508813-e58f-4dd1-91a1-7b17a8a2eae7', 'HTTPStatusCode': 200, 'date': 'Sun, 05 Jul 2026 00:15:30 GMT', 'RetryAttempts': 0}}
+2026-07-04 17:15:30,550 (INFO) eb : Traceback (most recent call last):
+  File "/usr/local/Cellar/aws-elasticbeanstalk/3.27.3/libexec/lib/python3.14/site-packages/ebcli/core/ebrun.py", line 62, in run_app
+    app.run()
+    ~~~~~~~^^
+  File "/usr/local/Cellar/aws-elasticbeanstalk/3.27.3/libexec/lib/python3.14/site-packages/cement/core/foundation.py", line 882, in run
+    return_val = self.controller._dispatch()
+  File "/usr/local/Cellar/aws-elasticbeanstalk/3.27.3/libexec/lib/python3.14/site-packages/cement/core/controller.py", line 471, in _dispatch
+    return func()
+  File "/usr/local/Cellar/aws-elasticbeanstalk/3.27.3/libexec/lib/python3.14/site-packages/cement/core/controller.py", line 477, in _dispatch
+    return func()
+  File "/usr/local/Cellar/aws-elasticbeanstalk/3.27.3/libexec/lib/python3.14/site-packages/ebcli/core/abstractcontroller.py", line 92, in default
+    self.do_command()
+    ~~~~~~~~~~~~~~~^^
+  File "/usr/local/Cellar/aws-elasticbeanstalk/3.27.3/libexec/lib/python3.14/site-packages/ebcli/controllers/deploy.py", line 107, in do_command
+    deployops.deploy(self.app_name, self.env_name, self.version, self.label,
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     self.message, group_name=group_name, process_app_versions=process_app_versions,
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     staged=self.staged, timeout=self.timeout, source=self.source,
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     source_bundle=source_bundle_zip)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/aws-elasticbeanstalk/3.27.3/libexec/lib/python3.14/site-packages/ebcli/operations/deployops.py", line 92, in deploy
+    commonops.wait_for_success_events(request_id,
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+                                      timeout_in_minutes=timeout,
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                      can_abort=True,
+                                      ^^^^^^^^^^^^^^^
+                                      env_name=env_name)
+                                      ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/aws-elasticbeanstalk/3.27.3/libexec/lib/python3.14/site-packages/ebcli/operations/commonops.py", line 146, in wait_for_success_events
+    _raise_if_error_event(event.message)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/aws-elasticbeanstalk/3.27.3/libexec/lib/python3.14/site-packages/ebcli/operations/commonops.py", line 255, in _raise_if_error_event
+    raise ServiceError(message)
+ebcli.objects.exceptions.ServiceError: Failed to deploy application.
+
+2026-07-05 00:15:09    INFO    Environment update is starting.
+2026-07-05 00:15:14    INFO    Deploying new version to instance(s).
+2026-07-05 00:15:18    INFO    Instance deployment successfully detected a JAR file in your source bundle.
+2026-07-05 00:15:18    INFO    Instance deployment successfully generated a 'Procfile'.
+2026-07-05 00:15:22    ERROR   Instance deployment failed. For details, see 'eb-engine.log'.
+2026-07-05 00:15:24    ERROR   [Instance: i-06c19b05b7f450eca] Command failed on instance. Return code: 1 Output: Engine execution has encountered an error..
+2026-07-05 00:15:24    INFO    Command execution completed on all instances. Summary: [Successful: 0, Failed: 1].
+2026-07-05 00:15:25    ERROR   Unsuccessful command execution on instance id(s) 'i-06c19b05b7f450eca'. Aborting the operation.
+2026-07-05 00:15:25    ERROR   Failed to deploy application.

@@ -1,0 +1,25 @@
+npm install -g eas-cli
+eas login
+eas build:configure
+
+{
+  "cli": {
+    "version": ">= 16.0.0"
+  },
+  "build": {
+    "preview": {
+      "android": {
+        "buildType": "apk"
+      },
+      "distribution": "internal"
+    },
+    "production": {
+      "android": {
+        "buildType": "app-bundle"
+      }
+    }
+  }
+}
+
+eas build -p android --profile preview
+export const API_URL = "https://nonconjunctively-untethering-bell.ngrok-free.dev/api";

@@ -23,6 +23,11 @@ public class Station {
     private String zone;
     private String woreda;
     private String kebele;
+    private Double latitude;
+    private Double longitude;
+
+    private String photoUrl;
+
 
     private String type;  // WASHING_STATION, etc.
 }

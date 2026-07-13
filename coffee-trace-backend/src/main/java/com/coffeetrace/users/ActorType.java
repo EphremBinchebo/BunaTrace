@@ -1,12 +1,16 @@
 package com.coffeetrace.users;
 
 public enum ActorType {
+
     FARMER,
+
     WASHING_STATION,
-    DRYING_STATION,
-    DRY_MILL,        // <-- ADD THIS
+
+    DRY_MILL,
+
     EXPORTER,
-    COOPERATIVE,
-    PROCESSOR,
-    ROASTER
+    DRYING_STATION,
+
+    COOPERATIVE
+
 }

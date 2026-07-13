@@ -11,7 +11,3 @@ public interface UserRepository extends JpaRepository<AppUser, String> {
 }
 
 
-//@Repository
-//public interface UserRepository extends JpaRepository<AppUser, String> {
-//    Optional<AppUser> findByUsername(String username);
-//}

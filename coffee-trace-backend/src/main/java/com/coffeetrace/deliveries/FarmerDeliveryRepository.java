@@ -17,5 +17,7 @@ public interface FarmerDeliveryRepository extends JpaRepository<FarmerDelivery, 
 
    // Optional<Object> findByReceiptNumber(String qrCode);
     Optional<FarmerDelivery> findByReceiptNumber(String receiptNumber);
+
+
 }
 

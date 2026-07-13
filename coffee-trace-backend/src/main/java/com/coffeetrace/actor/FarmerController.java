@@ -22,6 +22,9 @@ public class FarmerController {
     public ResponseEntity<List<Actor>> getAllFarmers() {
         return ResponseEntity.ok(farmerService.getAllFarmers());
     }
+
+
+
 }
 
 

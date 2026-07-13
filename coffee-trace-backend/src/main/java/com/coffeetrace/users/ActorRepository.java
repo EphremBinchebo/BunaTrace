@@ -1,19 +1,25 @@
-
 package com.coffeetrace.users;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
-
-@Repository
 public interface ActorRepository extends JpaRepository<Actor, UUID> {
 
-    // Get all farmers
-    List<Actor> findByType(ActorType type);
+    List<Actor> findByActiveTrue();
 
+    List<Actor> findByTypeAndActiveTrue(ActorType type);
+
+    Optional<Actor> findByIdAndActiveTrue(UUID id);
+
+    boolean existsByNameAndTypeAndActiveTrue(
+            String name,
+            ActorType type
+    );
+    long countByType(ActorType type);
+
+    long countByTypeAndActiveTrue(ActorType type);
 
 }
-

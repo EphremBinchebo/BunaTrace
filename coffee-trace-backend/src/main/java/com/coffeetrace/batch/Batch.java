@@ -158,6 +158,7 @@ public class Batch {
     public void setCreatedAt(LocalDate createdAt) {
         this.createdAt = createdAt;
     }
+
 }
 
 

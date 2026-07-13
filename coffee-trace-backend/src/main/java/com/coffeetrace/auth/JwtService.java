@@ -68,6 +68,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import java.security.Key;
@@ -98,10 +99,23 @@ public class JwtService {
     }
 
     // INTERNAL BUILDER
-    private String buildToken(String username, Map<String, Object> claims, long expirationMs) {
+//    private String buildToken(String username, Map<String, Object> claims, long expirationMs) {
+//        return Jwts.builder()
+//                .setSubject(username)
+//                .setClaims(claims)
+//                .setIssuedAt(new Date())
+//                .setExpiration(new Date(System.currentTimeMillis() + expirationMs))
+//                .signWith(key, SignatureAlgorithm.HS256)
+//                .compact();
+//    }
+
+    private String buildToken(String username,
+                              Map<String, Object> claims,
+                              long expirationMs) {
+
         return Jwts.builder()
-                .setSubject(username)
                 .setClaims(claims)
+                .setSubject(username)
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + expirationMs))
                 .signWith(key, SignatureAlgorithm.HS256)
@@ -116,11 +130,24 @@ public class JwtService {
                 .getBody()
                 .getSubject();
     }
-
-    public boolean isTokenValid(String token, String username) {
-        String extracted = extractUsername(token);
-        return extracted.equals(username) && !isExpired(token);
+    public boolean isTokenValid(String token, UserDetails userDetails) {
+        final String username = extractUsername(token);
+        return username.equals(userDetails.getUsername()) && !isExpired(token);
     }
+
+//    public boolean isTokenValid(String token, String username) {
+//        String extracted = extractUsername(token);
+//
+//        System.out.println("Extracted = " + extracted);
+//        System.out.println("Expected  = " + username);
+//
+//        return extracted.equals(username) && !isExpired(token);
+//    }
+
+//    public boolean isTokenValid(String token, String username) {
+//        String extracted = extractUsername(token);
+//        return extracted.equals(username) && !isExpired(token);
+//    }
 
     private boolean isExpired(String token) {
         Date expiration = Jwts.parserBuilder()

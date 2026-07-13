@@ -47,10 +47,6 @@ public class ExporterController {
         return ResponseEntity.ok(exporterService.createShipment(req));
     }
 
-//    @PostMapping("/export-lots/{exportLotId}/qr")
-//    public ResponseEntity<String> generateQr(@PathVariable String exportLotId) {
-//        return ResponseEntity.ok(exporterService.generateQrForExportLot(exportLotId));
-//    }
 @PostMapping("/export-lots/{exportLotId}/qr")
 public ResponseEntity<String> generateQr(@PathVariable UUID exportLotId) {
     return ResponseEntity.ok(exporterService.generateQrForExportLot(exportLotId));

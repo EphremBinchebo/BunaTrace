@@ -17,26 +17,12 @@ public class FarmerService {
     }
 
     public List<Actor> getAllFarmers() {
-        return actorRepository.findByType(ActorType.FARMER);
+        return actorRepository.findByTypeAndActiveTrue(ActorType.FARMER);
+    }
+
+    public List<Actor> getAllWashingStations() {
+        return actorRepository.findByTypeAndActiveTrue(ActorType.WASHING_STATION);
     }
 }
 
 
-//@Service
-//public class FarmerService {
-//
-//    private final FarmerRepository farmerRepository;
-//
-//    public FarmerService(FarmerRepository farmerRepository) {
-//        this.farmerRepository = farmerRepository;
-//    }
-//
-//    public List<Actor> getAllFarmers() {
-//        return farmerRepository.findByType("FARMER");
-//    }
-//
-//    public Actor getFarmerById(String farmerId) {
-//        return farmerRepository.findById(farmerId)
-//                .orElseThrow(() -> new RuntimeException("Farmer not found with ID: " + farmerId));
-//    }
-//}

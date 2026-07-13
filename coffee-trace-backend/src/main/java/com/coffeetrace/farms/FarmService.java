@@ -1,232 +1,213 @@
 package com.coffeetrace.farms;
 
-
+import com.coffeetrace.dashboard.ActivityService;
+import com.coffeetrace.farms.FarmRepository;
+import com.coffeetrace.farms.dto.FarmCreateRequest;
+import com.coffeetrace.farms.dto.FarmResponse;
+import com.coffeetrace.farms.dto.FarmUpdateRequest;
 import com.coffeetrace.users.Actor;
 import com.coffeetrace.users.ActorRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import java.util.UUID;
 
 import java.util.List;
+import java.util.UUID;
+
 @Service
+@RequiredArgsConstructor
 public class FarmService {
 
-    private final FarmRepository farmRepository;
+    private final FarmRepository repository;
     private final ActorRepository actorRepository;
+    private final ActivityService activityService;
 
-    public FarmService(FarmRepository farmRepository, ActorRepository actorRepository) {
-        this.farmRepository = farmRepository;
-        this.actorRepository = actorRepository;
+    public List<FarmResponse> getAll() {
+
+        return repository.findByActiveTrue()
+                .stream()
+                .map(this::toResponse)
+                .toList();
     }
 
-    public List<Farm> getAllFarms() {
-        return farmRepository.findAll();
+    public FarmResponse get(UUID id) {
+
+        Farm farm = repository.findById(id)
+                .orElseThrow(() ->
+                        new IllegalArgumentException("Farm not found"));
+
+        return toResponse(farm);
+    }
+    public List<FarmResponse> getByFarmer(UUID farmerId) {
+
+        return repository.findByFarmerIdAndActiveTrue(farmerId)
+                .stream()
+                .map(this::toResponse)
+                .toList();
     }
 
-//    public Farm createFarm(FarmRequest req) {
-//
-//        if (req.getFarmerId() == null) {
-//            throw new IllegalArgumentException("Farmer ID is required");
-//        }
-//
-//        Actor farmer = actorRepository.findById(req.getFarmerId())
-//                .orElseThrow(() -> new RuntimeException("Farmer not found"));
-//
-////        Farm farm = Farm.builder()
-////                .farmer(farmer)
-////                .name(req.getName())
-////                .areaHa(req.getAreaHa())
-////                .elevationM(req.getElevationM())
-////                .region(req.getRegion())
-////                .zone(req.getZone())
-////                .woreda(req.getWoreda())
-////                .kebele(req.getKebele())
-////                .build();
-////
-////        return farmRepository.save(farm);
-////    }
-        public Farm createFarm(FarmRequest req) {
+    public FarmResponse create(FarmCreateRequest request) {
 
-            if (req.getFarmerId() == null) {
-                throw new IllegalArgumentException("Farmer ID is required");
-            }
+        Actor farmer = actorRepository.findById(request.getFarmerId())
+                .orElseThrow(() ->
+                        new IllegalArgumentException("Farmer not found"));
 
-            Actor farmer = actorRepository.findById(req.getFarmerId())
-                    .orElseThrow(() -> new RuntimeException("Farmer not found"));
+        Farm farm = Farm.builder()
 
-            Farm farm = Farm.builder()
-                    .id(UUID.randomUUID())       // 🔥 CRITICAL FIX
-                    .farmer(farmer)
-                    .name(req.getName())
-                    .areaHa(req.getAreaHa())
-                    .elevationM(req.getElevationM())
-                    .region(req.getRegion())
-                    .zone(req.getZone())
-                    .woreda(req.getWoreda())
-                    .kebele(req.getKebele())
-                    .build();
+                .farmer(farmer)
 
-            return farmRepository.save(farm);
+                .name(request.getName())
+
+                .country("Ethiopia")
+
+                .region(request.getRegion())
+                .zone(request.getZone())
+                .woreda(request.getWoreda())
+                .kebele(request.getKebele())
+
+                .latitude(request.getLatitude())
+                .longitude(request.getLongitude())
+
+                .areaHectares(request.getAreaHectares())
+                .elevation(request.getElevation())
+                .variety(request.getVariety())
+
+                .plantingYear(request.getPlantingYear())
+
+                .organic(request.getOrganic())
+
+                .certification(request.getCertification())
+
+                .polygon(request.getPolygon())
+
+                .photoUrl(request.getPhotoUrl())
+
+                .notes(request.getNotes())
+
+                .active(true)
+
+                .build();
+
+        farm = repository.save(farm);
+
+        activityService.log(
+                "New Farm",
+                farm.getName(),
+                "FARM",
+                "CREATED"
+        );
+
+        return toResponse(farm);
+    }
+
+    public FarmResponse update(UUID id,
+                               FarmUpdateRequest request) {
+
+        Farm farm = repository.findById(id)
+                .orElseThrow(() ->
+                        new IllegalArgumentException("Farm not found"));
+
+        farm.setName(request.getName());
+
+        farm.setRegion(request.getRegion());
+        farm.setZone(request.getZone());
+        farm.setWoreda(request.getWoreda());
+        farm.setKebele(request.getKebele());
+
+        farm.setLatitude(request.getLatitude());
+        farm.setLongitude(request.getLongitude());
+
+        farm.setAreaHectares(request.getAreaHectares());
+
+        farm.setElevation(request.getElevation());
+
+        farm.setVariety(request.getVariety());
+
+        farm.setPlantingYear(request.getPlantingYear());
+
+        farm.setOrganic(request.getOrganic());
+
+        farm.setCertification(request.getCertification());
+
+        farm.setPolygon(request.getPolygon());
+
+        farm.setPhotoUrl(request.getPhotoUrl());
+
+        farm.setNotes(request.getNotes());
+
+        if (request.getActive() != null) {
+            farm.setActive(request.getActive());
         }
 
+        farm = repository.save(farm);
 
-        public List<Farm> getFarmsByFarmer(UUID farmerId) {
-        return farmRepository.findFarmsByFarmerId(farmerId);
+        activityService.log(
+                "Updated Farm",
+                farm.getName(),
+                "FARM",
+                "UPDATED"
+        );
+
+        return toResponse(farm);
     }
+    public void delete(UUID id) {
 
-    public Farm getFarmById(UUID id) {
-        return farmRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Farm not found"));
+        Farm farm = repository.findById(id)
+                .orElseThrow(() ->
+                        new IllegalArgumentException("Farm not found"));
+
+        farm.setActive(false);
+
+        repository.save(farm);
+
+        activityService.log(
+                "Deleted Farm",
+                farm.getName(),
+                "FARM",
+                "DELETED"
+        );
+    }
+    private FarmResponse toResponse(Farm farm) {
+
+        return FarmResponse.builder()
+
+                .id(farm.getId())
+
+                .farmerId(farm.getFarmer().getId())
+
+                .farmerName(farm.getFarmer().getName())
+
+                .name(farm.getName())
+
+                .country(farm.getCountry())
+
+                .region(farm.getRegion())
+                .zone(farm.getZone())
+                .woreda(farm.getWoreda())
+                .kebele(farm.getKebele())
+
+                .latitude(farm.getLatitude())
+                .longitude(farm.getLongitude())
+
+                .areaHectares(farm.getAreaHectares())
+
+                .elevation(farm.getElevation())
+
+                .variety(farm.getVariety())
+
+                .plantingYear(farm.getPlantingYear())
+
+                .organic(farm.getOrganic())
+
+                .certification(farm.getCertification())
+
+                .polygon(farm.getPolygon())
+
+                .photoUrl(farm.getPhotoUrl())
+
+                .notes(farm.getNotes())
+
+                .active(farm.getActive())
+
+                .build();
     }
 }
-
-
-//@Service
-//public class FarmService {
-//
-//    private final FarmRepository farmRepository;
-//    private final ActorRepository actorRepository;
-//
-//    public FarmService(FarmRepository farmRepository, ActorRepository actorRepository) {
-//        this.farmRepository = farmRepository;
-//        this.actorRepository = actorRepository;
-//    }
-//
-//    public List<Farm> getAllFarms() {
-//        return farmRepository.findAll();
-//    }
-//
-//    public Farm createFarm(FarmRequest req) {
-//
-//        if (req.getFarmerId() == null) {
-//            throw new IllegalArgumentException("Farmer ID is required");
-//        }
-//
-//        Actor farmer = actorRepository.findById(req.getFarmerId())
-//                .orElseThrow(() -> new RuntimeException("Farmer not found"));
-//
-//        Farm farm = Farm.builder()
-//                .farmer(farmer)
-//                .name(req.getName())
-//                .areaHa(req.getAreaHa())
-//                .elevationM(req.getElevationM())
-//                .region(req.getRegion())
-//                .zone(req.getZone())
-//                .woreda(req.getWoreda())
-//                .kebele(req.getKebele())
-//                .build();
-//
-//        return farmRepository.save(farm);
-//    }
-//
-//    public List<Farm> getFarmsByFarmer(UUID farmerId) {
-//        return farmRepository.findFarmsByFarmerId(farmerId);
-//    }
-//
-//    public Farm getFarmById(UUID id) {
-//        return farmRepository.findById(UUID.fromString(id))
-//                .orElseThrow(() -> new RuntimeException("Farm not found"));
-//    }
-//}
-
-
-//@Service
-//public class FarmService {
-//
-//    private final FarmRepository farmRepository;
-//    private final ActorRepository actorRepository;
-//
-//    public List<Farm> getAllFarms() {
-//        return farmRepository.findAll();
-//    }
-//
-//    public Farm createFarm(FarmRequest req) {
-//
-//        // Validate farmerId presence
-//        if (req.getFarmerId() == null) {
-//            throw new IllegalArgumentException("Farmer ID is required");
-//        }
-//
-//        // Load farmer actor
-//        Actor farmer = actorRepository.findById(req.getFarmerId())
-//                .orElseThrow(() -> new RuntimeException("Farmer not found"));
-//
-//        // Create Farm entity
-//        Farm farm = Farm.builder()
-//                .farmer(farmer)
-//                .name(req.getName())
-//                .areaHa(req.getAreaHa())
-//                .geomGeoJson(req.getGeoJson())   // your GeoJSON string field
-//                .woreda(req.getWoreda())
-//                .kebele(req.getKebele())
-//                .build();
-//
-//        return farmRepository.save(farm);
-//    }
-//
-//    public List<Farm> getFarmsByFarmer(UUID farmerId) {
-//        return farmRepository.findFarmsByFarmerId(farmerId);
-//    }
-//
-//    public Farm getFarmById(UUID id) {
-//        return farmRepository.findById(id)
-//                .orElseThrow(() -> new RuntimeException("Farm not found"));
-//    }
-//}
-
-
-//@Service
-//public class FarmService {
-//
-//    @Autowired
-//    public FarmService(FarmRepository farmRepository, ActorRepository actorRepository) {
-//        this.farmRepository = farmRepository;
-//        this.actorRepository = actorRepository;
-//    }
-//
-//    private final FarmRepository farmRepository;
-//    private final ActorRepository actorRepository;
-//
-//
-//    public List<Farm> getAllFarms() {
-//        return farmRepository.findAll();
-//    }
-//
-//    public Farm createFarm(FarmRequest req) {
-//
-////        if (req.getFarmerId() == null || req.getFarmerId().isBlank()) {
-////            throw new IllegalArgumentException("Farmer ID is required");
-////        }
-////        if (farmerId == null) {
-////            throw new IllegalArgumentException("Farmer ID is required");
-////        }
-//
-//        if (farmerIdStr == null || farmerIdStr.isBlank()) {
-//            throw new IllegalArgumentException("Farmer ID is required");
-//        }
-//
-//        UUID farmerId = UUID.fromString(farmerIdStr);
-//        Actor farmer = actorRepository.findById(req.getFarmerId())
-//                .orElseThrow(() -> new RuntimeException("Farmer not found"));
-//
-//        Farm farm = Farm.builder()
-//                .farmer(farmer)
-//                .name(req.getName())
-//                .areaHa(req.getAreaHa())
-//                .geomGeoJson(req.getGeoJson())
-//                .woreda(req.getWoreda())
-//                .kebele(req.getKebele())
-//                .build();
-//
-//        return farmRepository.save(farm);
-//    }
-//
-//    public List<Farm> getFarmsByFarmer(String farmerId) {
-//        return farmRepository.findFarmsByFarmerId(farmerId);
-//    }
-//
-//    public Farm getFarmById(String id) {
-//        return farmRepository.findById(id)
-//                .orElseThrow(() -> new RuntimeException("Farm not found"));
-//    }
-//}

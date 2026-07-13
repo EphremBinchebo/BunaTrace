@@ -51,6 +51,11 @@ public class BatchController {
     // ─────────────────────────────────────────────
     @PostMapping
     public ResponseEntity<BatchView> create(@RequestBody BatchCreateRequest req) {
+
+        System.out.println("Station: " + req.getStationId());
+        System.out.println("Batch: " + req.getBatchCode());
+        System.out.println("Process: " + req.getProcessType());
+        System.out.println("Deliveries: " + req.getDeliveryIds());
         Batch created = workflowService.createBatch(req);
         return ResponseEntity.ok(BatchView.from(created)); // ✅ FIXED
     }
@@ -68,8 +73,20 @@ public class BatchController {
     public List<FarmerDelivery> availableDeliveries(@PathVariable UUID stationId) {
         return deliveryRepo.findByWashingStationIdAndBatchIsNull(stationId);
     }
+    @GetMapping("/search")
+    public ResponseEntity<List<BatchView>> searchBatches(
+            @RequestParam String keyword
+    ) {
+        return ResponseEntity.ok(
+                workflowService.searchBatches(keyword)
+                        .stream()
+                        .map(BatchView::from)
+                        .toList()
+        );
+    }
 
 }
+
 
 //@RestController
 //@RequestMapping("/api/batches")

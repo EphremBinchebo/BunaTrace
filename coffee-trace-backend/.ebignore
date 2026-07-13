@@ -1,0 +1,10 @@
+.git
+.github
+.idea
+.vscode
+target/*.jar.original
+target/test-classes
+target/surefire-reports
+*.iml
+.DS_Store
+Dockerfile.bak

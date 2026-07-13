@@ -1,129 +1,93 @@
 package com.coffeetrace.farms;
 
-
 import com.coffeetrace.users.Actor;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 import java.util.UUID;
 
-
-//@Entity
-//@Table(name = "farm")
-//@Getter
-//@Setter
-//@NoArgsConstructor
-//@AllArgsConstructor
-//@Builder
-//public class Farm {
-//
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.UUID)
-//    private String id;
-//
-//    @ManyToOne(optional = false, fetch = FetchType.LAZY)
-//    @JoinColumn(name = "farmer_id")   // ✅ FK column in DB
-//    private Actor farmer;
-//
-//    private String name;
-//    private Double areaHa;
-//    private String woreda;
-//    private String kebele;
-//
-////    @Column(columnDefinition = "text")
-////    private String geomJson;
-//
-//    @Column(columnDefinition = "text")
-//    private String geomGeoJson; // farm polygon (GeoJSON text)
-//
-//    private Integer elevationMasl;
-//    private String variety;
-//    private String photoUrl;
-//}
 @Entity
+@Table(name = "farms")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Farm {
 
     @Id
-    @Column(columnDefinition = "BINARY(16)")
+    @GeneratedValue(strategy = GenerationType.UUID)
+    @JdbcTypeCode(SqlTypes.CHAR)
+    @Column(length = 36, nullable = false, updatable = false)
     private UUID id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "farmer_id")
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    private Actor farmer;
-
+    @Column(nullable = false)
     private String name;
 
-    private Double areaHa;
-    private Integer elevationM;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "farmer_id", nullable = false)
+    private Actor farmer;
+
+    /*
+     * Location
+     */
+
+    @Builder.Default
+    private String country = "Ethiopia";
+
     private String region;
+
     private String zone;
+
     private String woreda;
+
     private String kebele;
+
+    private Double latitude;
+
+    private Double longitude;
+
+    /*
+     * Coffee Information
+     */
+
+    private Double areaHectares;
+
+    private Integer elevation;
+
     private String variety;
 
-    private String geomGeoJson;   // ← ADD THIS FIELD
+    private Integer plantingYear;
+
+    /*
+     * Certification
+     */
+
+    @Builder.Default
+    private Boolean organic = false;
+
+    private String certification;
+
+    /*
+     * Media
+     */
+
+    @Lob
+    private String polygon;
+
+    private String photoUrl;
+
+    /*
+     * Notes
+     */
+
+    @Column(length = 2000)
+    private String notes;
+
+    @Builder.Default
+    private Boolean active = true;
+
+
 }
-
-//@Entity
-//@Table(name = "farm")
-//@Getter @Setter
-//@NoArgsConstructor @AllArgsConstructor @Builder
-//@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-//public class Farm {
-//
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.UUID)
-//    private UUID id;
-//
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "farmer_id")
-//    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})   // Important
-//    private Actor farmer;
-//
-//    private String name;
-//    private Double areaHa;
-//    private Integer elevationM;
-//    private String region;
-//    private String zone;
-//    private String woreda;
-//    private String kebele;
-//    private String variety;
-//}
-
-
-//@Entity
-//@Table(name = "farm")
-//@Getter @Setter
-//@NoArgsConstructor @AllArgsConstructor @Builder
-//public class Farm {
-//
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.UUID)
-//    private UUID id;
-//
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "farmer_id")
-//    private Actor farmer;
-//
-//    private String name;
-//
-//    private Double areaHa;
-//    private Integer elevationM;
-//    private String region;
-//    private String zone;
-//    private String woreda;
-//    private String kebele;
-//    private String variety;
-//    private String geomGeoJson;
-//
-//}
-
-
